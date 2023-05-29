@@ -24,6 +24,6 @@ See [the contributing document](./CONTRIBUTING.md).
 
 ## License
 
-[MIT](./LICENSE.md) license
+[MIT](./LICENSE) license
 
 Copyright (c) 2023 Marten de Bruijn
