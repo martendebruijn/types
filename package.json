@@ -2,6 +2,7 @@
   "name": "types",
   "version": "0.0.0",
   "description": "Personal common used types",
+  "author": "Marten de Bruijn <martendebruijn@outlook.com> (https://github.com/martendebruijn)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -17,7 +18,14 @@
     "types",
     "typescript"
   ],
-  "author": "Marten de Bruijn <martendebruijn@outlook.com> (https://github.com/martendebruijn)",
+  "homepage": "https://github.com/martendebruijn/types#readme",
+  "bugs": {
+    "url": "https://github.com/martendebruijn/types/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martendebruijn/types.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/node18": "^2.0.1",
