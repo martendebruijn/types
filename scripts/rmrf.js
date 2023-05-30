@@ -1,11 +1,18 @@
 import { existsSync, lstatSync } from 'node:fs';
 import { rmdir, rm, readdir } from 'node:fs/promises';
 import path from 'node:path';
+import { exit } from 'node:process';
 import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const dirRoot = path.join(__dirname, '../');
 const dirDist = path.join(dirRoot, '/dist');
+/**
+ * Delete a directory and all it's contents
+ *
+ * @param dirPath Path of the directory to be deleted
+ * @returns An empty promise
+ */
 const deleteDirContent = async (dirPath) => {
     const contents = await readdir(dirPath);
     for (const item of contents) {
@@ -18,7 +25,7 @@ const deleteDirContent = async (dirPath) => {
             await deleteDirContent(itemPath);
         }
         else {
-            console.error('File is something other than a file or a directory');
+            throw new Error('File is something other than a file or a directory');
         }
     }
     const updatedContents = await readdir(dirPath);
@@ -26,12 +33,11 @@ const deleteDirContent = async (dirPath) => {
         rmdir(dirPath);
     }
 };
-const dirDistExists = existsSync(dirDist);
-if (dirDistExists) {
-    try {
-        await deleteDirContent(dirDist);
-    }
-    catch (error) {
-        console.error(error);
-    }
+if (!existsSync(dirDist))
+    exit();
+try {
+    await deleteDirContent(dirDist);
+}
+catch (error) {
+    console.error(error);
 }
