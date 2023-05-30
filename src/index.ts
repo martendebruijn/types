@@ -1,3 +1,3 @@
-import { JSONValue } from './JSON'
+import type { JSONValue } from './JSON'
 
-export { JSONValue }
+export type { JSONValue }
