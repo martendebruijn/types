@@ -10,9 +10,7 @@
     "build": "tsc --build src/tsconfig.json",
     "build:scripts": "tsc --build scripts/tsconfig.json",
     "format": "prettier --write src/ scripts/",
-    "lint": "npm run lint:es && npm run lint:md",
-    "lint:es": "eslint src/**/*.ts",
-    "lint:md": "markdownlint '**/*.md' --ignore node_modules"
+    "lint": "eslint src/**/*.ts"
   },
   "keywords": [
     "types",
