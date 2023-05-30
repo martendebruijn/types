@@ -1,3 +1,4 @@
+/** A valid JSON value */
 export type JSONValue =
   | string
   | number
