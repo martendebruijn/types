@@ -3,6 +3,7 @@
   "include": ["**/*"],
   "compilerOptions": {
     "module": "es2022",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "outDir": "dist"
   }
 }

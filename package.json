@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prebuild": "node scripts/rmrf.js",
+    "prebuild": "node scripts/dist/rmrf.js",
     "build": "tsc --build src/tsconfig.json",
     "build:scripts": "tsc --build scripts/tsconfig.json",
     "format": "prettier --write src/ scripts/",
