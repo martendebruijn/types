@@ -39,5 +39,6 @@ if (!existsSync(dirDist)) exit()
 try {
   await deleteDirContent(dirDist)
 } catch (error) {
-  console.error(error)
+  if (error instanceof Error) throw error
+  else throw new Error(`${error}`)
 }
