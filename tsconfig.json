@@ -1,3 +1,6 @@
 {
-  "include": ["src/**/*", "scripts/**/*"]
+  "include": ["src/**/*", "scripts/**/*"],
+  "compilerOptions": {
+    "noUncheckedIndexedAccess": true
+  }
 }
