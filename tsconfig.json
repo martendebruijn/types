@@ -1,5 +1,6 @@
 {
   "include": ["src/**/*", "scripts/**/*"],
+  "exclude": ["src/*test.*"],
   "compilerOptions": {
     "noUncheckedIndexedAccess": true
   }

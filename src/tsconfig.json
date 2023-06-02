@@ -1,7 +1,6 @@
 {
   "extends": ["../tsconfig.json", "@tsconfig/recommended/tsconfig.json"],
   "include": ["./**/*"],
-  "exclude": ["*.test.*"],
   "compilerOptions": {
     "outDir": "../dist",
     "declaration": true

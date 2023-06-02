@@ -10,7 +10,8 @@
     "build": "tsc --build src/tsconfig.json",
     "build:scripts": "tsc --build scripts/tsconfig.json",
     "format": "prettier --write src/ scripts/",
-    "lint": "eslint src/**/*.ts"
+    "lint": "eslint src/**/*.ts",
+    "test": "jest"
   },
   "keywords": [
     "types",
@@ -26,15 +27,19 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@jest/globals": "^29.5.0",
     "@tsconfig/node18": "^2.0.1",
     "@tsconfig/recommended": "^1.0.2",
+    "@tsd/typescript": "^5.1.3",
     "@types/node": "^20.2.5",
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
+    "jest-tsd": "^0.2.2",
     "prettier": "2.8.8",
     "prettier-plugin-jsdoc": "^0.4.2",
-    "typescript": "^5.0.4"
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.1.3"
   }
 }
