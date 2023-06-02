@@ -38,7 +38,6 @@
     "eslint-config-prettier": "^8.8.0",
     "jest-tsd": "^0.2.2",
     "prettier": "2.8.8",
-    "prettier-plugin-jsdoc": "^0.4.2",
     "ts-jest": "^29.1.0",
     "typescript": "^5.1.3"
   }
