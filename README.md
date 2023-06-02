@@ -1,11 +1,15 @@
 # @martendebruijn/types
 
-Common types I use often.
+Common types and type guards I use often.
 
 - [@martendebruijn/types](#martendebruijntypes)
   - [Get started](#get-started)
-  - [Types](#types)
+  - [Usage](#usage)
+    - [Type guards](#type-guards)
+    - [Types](#types)
+  - [Releases](#releases)
   - [Contributing](#contributing)
+  - [Authors and acknowledgment](#authors-and-acknowledgment)
   - [License](#license)
 
 ## Get started
@@ -14,16 +18,36 @@ Common types I use often.
 npm install @martendebruijn/types
 ```
 
-## Types
+## Usage
+
+### Type guards
+
+- **[`isDefined(x)`](./src/guards.ts)** - is x defined?
+
+### Types
 
 - **[`JSONValue`](./src/JSON.ts)** - A valid JSON value
 
+## Releases
+
+For a complete list of releases, please see the [changelog](./CHANGELOG.md).
+
 ## Contributing
 
-See [the contributing document](./CONTRIBUTING.md).
+Please do contribute! See the [contributing document](./CONTRIBUTING.md) for how
+to contribute.
+
+## Authors and acknowledgment
+
+Inspired by the [Types library](https://github.com/mike-north/types) made by
+[Mike North](https://github.com/mike-north) and the TypeScript courses he teaches.
+
+- **[@martendebruijn](https://github.com/martendebruijn)** - Owner
+
+For a full list of contributors, please see the [contributors list](https://github.com/martendebruijn/types/graphs/contributors).
 
 ## License
 
 [MIT](./LICENSE) license
 
-Copyright (c) 2023 Marten de Bruijn
+Copyright (c) 2023 [Marten de Bruijn](https://github.com/martendebruijn)
