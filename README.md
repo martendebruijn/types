@@ -7,6 +7,7 @@ Common types and type guards I use often.
   - [Usage](#usage)
     - [Type guards](#type-guards)
     - [Types](#types)
+    - [Utility](#utility)
   - [Releases](#releases)
   - [Contributing](#contributing)
   - [Authors and acknowledgment](#authors-and-acknowledgment)
@@ -22,11 +23,15 @@ npm install @martendebruijn/types
 
 ### Type guards
 
-- **[`isDefined(x)`](./src/guards.ts)** - is x defined?
+- **[`isDefined(x)`](./src/guards.ts)** - Is x defined?
 
 ### Types
 
 - **[`JSONValue`](./src/JSON.ts)** - A valid JSON value
+
+### Utility
+
+- **[`catchError(error)`](./src/utility.ts)** - Make sure to throw an error
 
 ## Releases
 
