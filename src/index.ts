@@ -1,6 +1,6 @@
 import type { JSONValue } from './JSON'
 import { isDefined } from './guards'
-import { catchError } from './utils'
+import { generateError } from './utils'
 
 export type { JSONValue }
-export { isDefined, catchError }
+export { isDefined, generateError }

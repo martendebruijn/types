@@ -1,18 +1,17 @@
 /**
- * Make sure to throw an error
+ * Make sure to throw an actual error
  *
- * @param error An unknown throw
- *
- * @throws always
+ * @param error An unknown thrown
+ * @returns An error to be thrown
  *
  * @example
  *  try {
  *   foo()
  * } catch (error) {
- *   catchError(error)
+ *   throw generateError(error)
  * }
  */
-export function catchError(error: unknown): void {
-  if (error instanceof Error) throw error
-  else throw new Error(`${error}`)
+export function generateError(error: unknown): Error {
+  if (error instanceof Error) return error
+  else return new Error(`${error}`)
 }

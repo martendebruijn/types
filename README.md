@@ -31,7 +31,8 @@ npm install @martendebruijn/types
 
 ### Utility
 
-- **[`catchError(error)`](./src/utils.ts)** - Make sure to throw an error
+- **[`generateError(error)`](./src/utils.ts)** - Make sure an error is actual an
+  error
 
 ## Releases
 

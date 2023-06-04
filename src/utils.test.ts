@@ -1,46 +1,12 @@
 import { describe, expect, it } from '@jest/globals'
-import { catchError } from './utils'
+import { generateError } from './utils'
 
 describe('catchError', () => {
-  it("throw an error when it's an error", () => {
-    const foo = () => {
-      throw new Error('foo')
-    }
-
-    try {
-      foo()
-    } catch (error: unknown) {
-      expect(() => {
-        catchError(error)
-      }).toThrow()
-    }
+  it('should return an error when given an error', () => {
+    expect(generateError(new Error('foo'))).toStrictEqual(new Error('foo'))
   })
 
-  it('throw an error when throwing a string', () => {
-    const foo = () => {
-      throw 'foo'
-    }
-
-    try {
-      foo()
-    } catch (error) {
-      expect(() => {
-        catchError(error)
-      }).toThrow()
-    }
-  })
-
-  it('throw an error when throwing a number', () => {
-    const foo = () => {
-      throw 12
-    }
-
-    try {
-      foo()
-    } catch (error) {
-      expect(() => {
-        catchError(error)
-      }).toThrow()
-    }
+  it('should return an error when given a string', () => {
+    expect(generateError('foo')).toStrictEqual(new Error('foo'))
   })
 })
