@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const dirRoot = path.join(__dirname, '../')
+const dirRoot = path.join(__dirname, '../../')
 const dirDist = path.join(dirRoot, '/dist')
 
 /**
