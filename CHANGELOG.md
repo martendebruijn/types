@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Improved documentation comments to the `isDefined` type guard
+- Improved documentation comments of the `isDefined` type guard
 
 ## [1.0.0] - 2023-06-04
 
