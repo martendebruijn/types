@@ -1,5 +1,6 @@
 import { describe, expect, it } from '@jest/globals'
 import { isDefined } from './guards'
+import { expectTypeTestsToPassAsync } from 'jest-tsd'
 
 describe('isDefined', () => {
   it('should return true when given a number', () => {
@@ -36,5 +37,9 @@ describe('isDefined', () => {
 
   it('should return false when given undefined', () => {
     expect(isDefined(undefined)).toBe(false)
+  })
+
+  it('should not produce static type errors', async () => {
+    await expectTypeTestsToPassAsync(__filename)
   })
 })
