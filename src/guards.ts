@@ -1,15 +1,26 @@
 /**
  * Type guard to check if a value is defined
  *
+ * Where `T` is the type you want to check against
+ *
  * @param x Value to check
  * @returns True if defined, false if undefined
  *
- * Please note that `null` returns `true`
- *
  * @example
- *  isDefined('string') // => true
- *  isDefined(undefined) // => false
- *  isDefined(null) // => true
+ * let subject: string | null | undefined = 'foo'
+ * if (isDefined<typeof subject>(subject)) {
+ *    console.log("I'm defined")
+ * }
+ *
+ * subject = undefined
+ * if (isDefined<typeof subject>(subject)) {
+ *    console.log("I'm NOT defined and this block won't run")
+ * }
+ *
+ * subject = null
+ * if (isDefined<typeof subject>(subject)) {
+ *    console.log("I'm defined")
+ * }
  */
 export function isDefined<T>(x: T | undefined): x is T {
   return typeof x !== 'undefined'
