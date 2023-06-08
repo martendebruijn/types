@@ -8,17 +8,17 @@
  *
  * @example
  * let subject: string | null | undefined = 'foo'
- * if (isDefined<typeof subject>(subject)) {
+ * if (isDefined(subject)) {
  *    console.log("I'm defined")
  * }
  *
  * subject = undefined
- * if (isDefined<typeof subject>(subject)) {
+ * if (isDefined(subject)) {
  *    console.log("I'm NOT defined and this block won't run")
  * }
  *
  * subject = null
- * if (isDefined<typeof subject>(subject)) {
+ * if (isDefined(subject)) {
  *    console.log("I'm defined")
  * }
  */
