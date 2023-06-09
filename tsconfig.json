@@ -1,7 +1,8 @@
 {
   "include": ["src/**/*", "scripts/**/*"],
-  "exclude": ["src/*test.*"],
+  "exclude": ["src/*test*.*"],
   "compilerOptions": {
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "esModuleInterop": true
   }
 }
