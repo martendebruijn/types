@@ -11,7 +11,7 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['*test.ts'],
+      files: ['*test*.ts'],
       rules: {
         '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
