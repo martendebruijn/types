@@ -28,6 +28,7 @@ npm install @martendebruijn/types
 ### Types
 
 - **[`JSONValue`](./src/JSON.ts)** - A valid JSON value
+- **[`Tuple`](./src/tuple.ts)** - Tuple type
 
 ### Utility
 
