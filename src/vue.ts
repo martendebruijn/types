@@ -2,11 +2,11 @@
  * Get the prop types of a given component
  *
  * @example
- * // Get all prop types
- * PropsOf<MyComponent>
+ *  // Get all prop types
+ *  PropsOf<MyComponent>
  *
- * // Get type of specific prop
- * PropsOf<MyComponent>["prop"]
+ *  // Get type of specific prop
+ *  PropsOf<MyComponent>["prop"]
  *
  */
 export type PropsOf<C extends abstract new (...args: never[]) => void> =
