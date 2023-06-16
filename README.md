@@ -41,7 +41,7 @@ npm install @martendebruijn/types
 
 #### Vue
 
-- **[`PropsOf<VueComponent>`](./src/Vue.ts)** - Get the types of the properties
+- **[`PropsOf<VueComponent>`](./src/vue.ts)** - Get the types of the properties
   of a Vue component
 
 ## Releases
