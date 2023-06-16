@@ -2,11 +2,13 @@
  * Get the prop types of a given component
  *
  * @example
+ *  import MyComponent from 'MyComponent.vue'
+ *
  *  // Get all prop types
- *  PropsOf<MyComponent>
+ *  PropsOf<typeof MyComponent>
  *
  *  // Get type of specific prop
- *  PropsOf<MyComponent>["prop"]
+ *  PropsOf<typeof MyComponent>["prop"]
  *
  */
 export type PropsOf<C extends abstract new (...args: never[]) => void> =
