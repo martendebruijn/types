@@ -8,6 +8,8 @@ Common types and type guards I use often.
     - [Type guards](#type-guards)
     - [Types](#types)
     - [Utility](#utility)
+    - [Framework specific](#framework-specific)
+      - [Vue](#vue)
   - [Releases](#releases)
   - [Contributing](#contributing)
   - [Authors and acknowledgment](#authors-and-acknowledgment)
@@ -34,6 +36,13 @@ npm install @martendebruijn/types
 
 - **[`generateError(error)`](./src/utils.ts)** - Make sure an error is actual an
   error
+
+### Framework specific
+
+#### Vue
+
+- **[`PropsOf<VueComponent>`](./src/Vue.ts)** - Get the types of the properties
+  of a Vue component
 
 ## Releases
 
