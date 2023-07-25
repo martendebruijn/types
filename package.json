@@ -1,6 +1,6 @@
 {
   "name": "@martendebruijn/types",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Personal common used types",
   "author": "Marten de Bruijn <martendebruijn@outlook.com> (https://github.com/martendebruijn)",
   "main": "dist/index.js",
