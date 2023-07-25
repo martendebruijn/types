@@ -16,6 +16,7 @@
       - [JSDoc](#jsdoc)
       - [README](#readme)
       - [CHANGELOG](#changelog)
+    - [Release](#release)
 
 ## Get started
 
@@ -153,3 +154,63 @@ When adding types or type guards, add them to the README respectively.
 #### CHANGELOG
 
 This project uses a CHANGELOG based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+
+### Release
+
+When making a release, do not use `npm version`. The reason for this is that the
+command only adds just the version number to the commit message. What we want, however,
+is everything that has changed to put in the body of the commit message so that
+it can be easily read on [the tags overview page on GitHub](https://github.com/martendebruijn/types/tags).
+
+So instead of `npm version`, use the following instructions:
+
+1. Update version number in package.json
+2. Update npm
+
+    ```sh
+    npm install
+    ```
+
+3. Add package and package-lock to staged area
+
+    ```sh
+    git add package.json package-lock.json
+    ```
+
+4. Commit the changes
+
+    ```sh
+    git commit
+    ```
+
+5. Add changelog to body
+
+    ```md
+    Added:
+  
+    - feature 1
+    - feature 2
+  
+    Fixed:
+
+    - fixed 1
+    - fixed 2
+    ```
+
+6. Push the changes
+
+    ```sh
+    git push
+    ```
+
+7. Add a git tag
+
+    ```sh
+    git tag <version>
+    ```
+
+8. Push the tag(s)
+
+    ```sh
+    git push --tags
+    ```
