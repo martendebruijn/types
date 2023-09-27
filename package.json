@@ -27,18 +27,18 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@jest/globals": "^29.6.2",
-    "@tsconfig/node18": "^18.2.0",
-    "@tsconfig/recommended": "^1.0.2",
-    "@tsd/typescript": "^5.1.6",
-    "@types/node": "^18.17.5",
-    "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "@typescript-eslint/parser": "^6.4.0",
-    "eslint": "^8.47.0",
+    "@jest/globals": "^29.7.0",
+    "@tsconfig/node18": "^18.2.2",
+    "@tsconfig/recommended": "^1.0.3",
+    "@tsd/typescript": "^5.2.2",
+    "@types/node": "^18.18.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "jest-tsd": "^0.2.2",
-    "prettier": "3.0.1",
+    "prettier": "3.0.3",
     "ts-jest": "^29.1.1",
-    "typescript": "5.1.6"
+    "typescript": "5.2.2"
   }
 }
