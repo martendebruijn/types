@@ -27,6 +27,12 @@ npm install @martendebruijn/types
 ### Type guards
 
 - **[`isDefined(x)`](./src/guards.ts)** - Is x defined?
+- **[`isString(x)`](./src/guards.ts)** - Is x a string?
+- **[`isNumber(x)`](./src/guards.ts)** - Is x a number?
+- **[`isBigInt(x)`](./src/guards.ts)** - Is x a bigint?
+- **[`isBool(x)`](./src/guards.ts)** - Is x a boolean?
+- **[`isSymbol(x)`](./src/guards.ts)** - Is x a symbol?
+- **[`isNull(x)`](./src/guards.ts)** - Is x null?
 
 ### Types
 

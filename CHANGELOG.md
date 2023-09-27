@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `isString(x)` - Is x a string?
+- `isNumber(x)` - Is x a number?
+- `isBigInt(x)` - Is x a bigint?
+- `isBool(x)` - Is x a boolean?
+- `isSymbol(x)` - Is x a symbol?
+- `isNull(x)` - Is x null?
+
 ## [1.2.0] - 2023-07-25
 
 ### Added
