@@ -1,6 +1,7 @@
 # @martendebruijn/types
 
-Common types and type guards I use often.
+Personal common used types, type guards and other to quickly jumpstart a new project
+or experiment.
 
 - [@martendebruijn/types](#martendebruijntypes)
   - [Get started](#get-started)
@@ -34,7 +35,7 @@ npm install @martendebruijn/types
 
 ### Utility
 
-- **[`generateError(error)`](./src/utils.ts)** - Make sure an error is actual an
+- **[`generateError(error)`](./src/utils.ts)** - Make sure an error is an actual
   error
 
 ### Framework specific
