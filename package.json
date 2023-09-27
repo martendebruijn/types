@@ -1,7 +1,7 @@
 {
   "name": "@martendebruijn/types",
   "version": "1.2.0",
-  "description": "Personal common used types",
+  "description": "Personal common used types, type guards and other to quickly jumpstart a new project or experiment",
   "author": "Marten de Bruijn <martendebruijn@outlook.com> (https://github.com/martendebruijn)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,10 @@
   },
   "keywords": [
     "types",
-    "typescript"
+    "typescript",
+    "type",
+    "typeguard",
+    "typeguards"
   ],
   "homepage": "https://github.com/martendebruijn/types#readme",
   "bugs": {
