@@ -31,6 +31,14 @@ export function isDefined<T>(x: T | undefined): x is T {
  *
  * @param x Value to check
  * @returns True if a string, false otherwise
+ *
+ * @example
+ * const foo = '' as string | number
+ * foo.toLowerCase() // Error: Property 'toLowerCase' does not exist on type 'number'.
+ *
+ * if (isString(foo)) {
+ *  foo.toLowerCase() // Fine
+}
  */
 export const isString = (x: unknown): x is string => typeof x === 'string'
 
@@ -39,6 +47,14 @@ export const isString = (x: unknown): x is string => typeof x === 'string'
  *
  * @param x Value to check
  * @returns True if a number, false otherwise
+ *
+ * @example
+ * const foo = 0 as string | number
+ * foo.toFixed() // Error: Property 'toFixed' does not exist on type 'string'.
+ *
+ * if (isNumber(foo)) {
+ *   foo.toFixed() // Fine
+ * }
  */
 export const isNumber = (x: unknown): x is number => typeof x === 'number'
 
@@ -47,6 +63,16 @@ export const isNumber = (x: unknown): x is number => typeof x === 'number'
  *
  * @param x Value to check
  * @returns True if a bigint, false otherwise
+ *
+ * @example
+ * const foo = 0n as bigint | string
+ * foo.toLowerCase() // Error: Property 'toLowerCase' does not exist on type 'bigint'.
+ *
+ * if (isBigInt(foo)) {
+ *   doSomethingElse()
+ * } else {
+ *   foo.toLowerCase() // Fine
+ * }
  */
 export const isBigInt = (x: unknown): x is bigint => typeof x === 'bigint'
 
@@ -55,6 +81,16 @@ export const isBigInt = (x: unknown): x is bigint => typeof x === 'bigint'
  *
  * @param x Value to check
  * @returns True if a boolean, false otherwise
+ *
+ * @example
+ * const foo = false as boolean | string
+ * foo.toLowerCase() // Error: Property 'toLowerCase' does not exist on type 'false'.
+ *
+ * if (isBool(foo)) {
+ *   doSomethingElse()
+ * } else {
+ *   foo.toLowerCase() // Fine
+ * }
  */
 export const isBool = (x: unknown): x is boolean => typeof x === 'boolean'
 
@@ -63,6 +99,14 @@ export const isBool = (x: unknown): x is boolean => typeof x === 'boolean'
  *
  * @param x Value to check
  * @returns True if a symbol, false otherwise
+ *
+ * @example
+ * const foo = Symbol('lorem ipsum') as string | symbol
+ * foo.description // Error: Property 'description' does not exist on type 'string'.
+ *
+ * if (isSymbol(foo)) {
+ *   foo.description // Fine
+ * }
  */
 export const isSymbol = (x: unknown): x is symbol => typeof x === 'symbol'
 
@@ -71,5 +115,15 @@ export const isSymbol = (x: unknown): x is symbol => typeof x === 'symbol'
  *
  * @param x Value to check
  * @returns True if null, false otherwise
+ *
+ * @example
+ * const foo = null as null | string
+ * foo.toLowerCase() // Error: 'foo' is possibly 'null'.
+ *
+ * if (isNull(foo)) {
+ *   doSomethingElse()
+ * } else {
+ *   foo.toLowerCase() // Fine
+ * }
  */
 export const isNull = (x: unknown): x is null => x === null
