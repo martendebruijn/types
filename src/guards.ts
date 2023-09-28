@@ -22,9 +22,8 @@
  *    console.log("I'm defined")
  * }
  */
-export function isDefined<T>(x: T | undefined): x is T {
-  return typeof x !== 'undefined'
-}
+export const isDefined = <T>(x: T | undefined): x is T =>
+  typeof x !== 'undefined'
 
 /**
  * Check if variable is a string
