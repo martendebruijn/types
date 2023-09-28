@@ -1,4 +1,4 @@
-import { describe, test, expectTypeOf } from 'vitest'
+import { test, expectTypeOf } from 'vitest'
 import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull } from './guards' /* prettier-ignore */
 
 test('isDefined should have a guard value of the type parameter', () => {
