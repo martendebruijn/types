@@ -1,49 +1,40 @@
-import { describe, it } from '@jest/globals'
-import { expectAssignable, expectNotAssignable } from 'jest-tsd'
+import { describe, test, expectTypeOf } from 'vitest'
 import type { Tuple } from './tuple'
 
 describe('tuple', () => {
-  it("should verify it's a Tuple type when given a number[]", () => {
-    expectAssignable<Tuple>([1, 2, 3])
-  })
+  test("should verify it's a Tuple type when given a number[]", () =>
+    expectTypeOf([1, 2, 3]).toMatchTypeOf<Tuple>())
 
-  it("should verify it's a Tuple type when given a string[]", () => {
-    expectAssignable<Tuple>(['lorem', 'ipsum', 'dolor'])
-  })
+  test("should verify it's a Tuple type when given a string[]", () =>
+    expectTypeOf(['lorem', 'ipsum', 'dolor']).toMatchTypeOf<Tuple>())
 
-  it("should verify it's a Tuple type when given a (string | boolean)[]", () => {
-    expectAssignable<Tuple>(['lorem', 'ipsum', true])
-  })
+  test("should verify it's a Tuple type when given a (string | boolean)[]", () =>
+    expectTypeOf(['lorem', 'ipsum', true]).toMatchTypeOf<Tuple>())
 
-  it("should verify it's a Tuple type when given a (bigint | symbol)[]", () => {
-    expectAssignable<Tuple>([BigInt(9007199254740991), Symbol('foo')])
-  })
+  test("should verify it's a Tuple type when given a (bigint | symbol)[]", () =>
+    expectTypeOf([
+      BigInt(9007199254740991),
+      Symbol('foo'),
+    ]).toMatchTypeOf<Tuple>())
 
-  it("should verify it's NOT a Tuple type when given a string", () => {
-    expectNotAssignable<Tuple>('lorem')
-  })
+  test("should verify it's NOT a Tuple type when given a string", () =>
+    expectTypeOf('lorem').not.toMatchTypeOf<Tuple>())
 
-  it("should verify it's NOT a Tuple type when given a number", () => {
-    expectNotAssignable<Tuple>(12)
-  })
+  test("should verify it's NOT a Tuple type when given a number", () =>
+    expectTypeOf(12).not.toMatchTypeOf<Tuple>())
 
-  it("should verify it's NOT a Tuple type when given a null", () => {
-    expectNotAssignable<Tuple>(null)
-  })
+  test("should verify it's NOT a Tuple type when given a null", () =>
+    expectTypeOf(null).not.toMatchTypeOf<Tuple>())
 
-  it("should verify it's NOT a Tuple type when given a undefined", () => {
-    expectNotAssignable<Tuple>(undefined)
-  })
+  test("should verify it's NOT a Tuple type when given a undefined", () =>
+    expectTypeOf(undefined).not.toMatchTypeOf<Tuple>())
 
-  it("should verify it's NOT a Tuple type when given a class", () => {
-    expectNotAssignable<Tuple>(class {})
-  })
+  test("should verify it's NOT a Tuple type when given a class", () =>
+    expectTypeOf(class {}).not.toMatchTypeOf<Tuple>())
 
-  it("should verify it's NOT a Tuple type when given a function", () => {
-    expectNotAssignable<Tuple>(() => {})
-  })
+  test("should verify it's NOT a Tuple type when given a function", () =>
+    expectTypeOf(() => {}).not.toMatchTypeOf<Tuple>())
 
-  it("should verify it's NOT a Tuple type when given a Promise", () => {
-    expectNotAssignable<Tuple>(new Promise((res) => ''))
-  })
+  test("should verify it's NOT a Tuple type when given a Promise", () =>
+    expectTypeOf(new Promise((res) => '')).not.toMatchTypeOf<Tuple>())
 })
