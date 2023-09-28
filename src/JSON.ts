@@ -50,7 +50,7 @@ interface JsonPatchDefault {
  *
  * Note that you have to use `as const` when you use a string literal for the operation.
  *
- *  @example
+ * @example
  * const foo: JsonPatch = [
  *    { op: 'replace' as const, path: '/baz', value: 'boo' },
  *    { op: 'add' as const, path: '/hello', value: ['world'] },
