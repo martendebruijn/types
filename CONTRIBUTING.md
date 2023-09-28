@@ -140,8 +140,7 @@ This project uses [SemVer](https://semver.org/) and Test Driven Development.
 
 ### Testing
 
-See [jest-tsd](https://github.com/0livare/jest-tsd) for creating test suites for
-types.
+See [vitest](https://vitest.dev/) for creating test suites.
 
 #### Naming conventions
 
