@@ -1,12 +1,12 @@
-import { describe, expect, it } from '@jest/globals'
+import { describe, test, expect } from 'vitest'
 import { generateError } from './utils'
 
 describe('catchError', () => {
-  it('should return an error when given an error', () => {
+  test('should return an error when given an error', () => {
     expect(generateError(new Error('foo'))).toStrictEqual(new Error('foo'))
   })
 
-  it('should return an error when given a string', () => {
+  test('should return an error when given a string', () => {
     expect(generateError('foo')).toStrictEqual(new Error('foo'))
   })
 })
