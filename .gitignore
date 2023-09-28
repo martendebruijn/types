@@ -1,3 +1,4 @@
+*.vitest-temp.json
 !scripts
 # Logs
 logs
