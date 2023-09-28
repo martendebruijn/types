@@ -1,45 +1,252 @@
-import { describe, expect, it } from '@jest/globals'
-import { isDefined } from './guards'
-import { expectTypeTestsToPassAsync } from 'jest-tsd'
+import { describe, test, expect } from 'vitest'
+import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, } from './guards' /* prettier-ignore */
 
 describe('isDefined', () => {
-  it('should return true when given a number', () => {
+  test('should return true when given a number', () => {
     expect(isDefined(1)).toBe(true)
   })
 
-  it('should return true when given a string', () => {
+  test('should return true when given a string', () => {
     expect(isDefined('foo')).toBe(true)
   })
 
-  it('should return true when given a boolean', () => {
+  test('should return true when given a boolean', () => {
     expect(isDefined(true)).toBe(true)
   })
 
-  it('should return true when given null', () => {
+  test('should return true when given null', () => {
     expect(isDefined(null)).toBe(true)
   })
 
-  it('should return true when given a symbol', () => {
+  test('should return true when given a symbol', () => {
     expect(isDefined(Symbol())).toBe(true)
   })
 
-  it('should return true when given a class', () => {
+  test('should return true when given a class', () => {
     expect(isDefined(class {})).toBe(true)
   })
 
-  it('should return true when given a function', () => {
+  test('should return true when given a function', () => {
     expect(isDefined(() => '')).toBe(true)
   })
 
-  it('should return true when given a BigInt', () => {
+  test('should return true when given a BigInt', () => {
     expect(isDefined(BigInt(9007199254740991))).toBe(true)
   })
 
-  it('should return false when given undefined', () => {
+  test('should return false when given undefined', () => {
     expect(isDefined(undefined)).toBe(false)
   })
+})
 
-  it('should not produce static type errors', async () => {
-    await expectTypeTestsToPassAsync(__filename)
+describe('isString', () => {
+  test('should return true when given a string', () => {
+    expect(isString('lorem ipsum')).toBe(true)
+    expect(isString('')).toBe(true)
+  })
+
+  test('should return false when given a number', () => {
+    expect(isString(12)).toBe(false)
+    expect(isString(0)).toBe(false)
+    expect(isString(-0)).toBe(false)
+    expect(isString(NaN)).toBe(false)
+  })
+
+  test('should return false when given a boolean', () => {
+    expect(isString(true)).toBe(false)
+    expect(isString(false)).toBe(false)
+  })
+
+  test('should return false when given a null', () => {
+    expect(isString(null)).toBe(false)
+  })
+
+  test('should return false when given a symbol', () => {
+    expect(isString(Symbol())).toBe(false)
+    expect(isString(Symbol('lorem ipsum'))).toBe(false)
+  })
+
+  test('should return false when given a undefined', () => {
+    expect(isString(undefined)).toBe(false)
+  })
+})
+
+describe('isNumber', () => {
+  test('should return true when given a number', () => {
+    expect(isNumber(12)).toBe(true)
+    expect(isNumber(0)).toBe(true)
+    expect(isNumber(-0)).toBe(true)
+    expect(isNumber(NaN)).toBe(true)
+  })
+
+  test('should return false when given a string', () => {
+    expect(isNumber('lorem ipsum')).toBe(false)
+    expect(isNumber('')).toBe(false)
+  })
+
+  test('should return false when given a boolean', () => {
+    expect(isNumber(true)).toBe(false)
+    expect(isNumber(false)).toBe(false)
+  })
+
+  test('should return false when given a null', () => {
+    expect(isNumber(null)).toBe(false)
+  })
+
+  test('should return false when given a symbol', () => {
+    expect(isNumber(Symbol())).toBe(false)
+    expect(isNumber(Symbol('lorem ipsum'))).toBe(false)
+  })
+
+  test('should return false when given a undefined', () => {
+    expect(isNumber(undefined)).toBe(false)
+  })
+})
+
+describe('isBigInt', () => {
+  test('should return true when given a bigint', () => {
+    expect(isBigInt(0n)).toBe(true)
+    expect(isBigInt(10n)).toBe(true)
+  })
+
+  test('should return false when given a number', () => {
+    expect(isBigInt(12)).toBe(false)
+    expect(isBigInt(0)).toBe(false)
+    expect(isBigInt(-0)).toBe(false)
+    expect(isBigInt(NaN)).toBe(false)
+  })
+
+  test('should return false when given a string', () => {
+    expect(isBigInt('lorem ipsum')).toBe(false)
+    expect(isBigInt('')).toBe(false)
+  })
+
+  test('should return false when given a boolean', () => {
+    expect(isBigInt(true)).toBe(false)
+    expect(isBigInt(false)).toBe(false)
+  })
+
+  test('should return false when given a null', () => {
+    expect(isBigInt(null)).toBe(false)
+  })
+
+  test('should return false when given a symbol', () => {
+    expect(isBigInt(Symbol())).toBe(false)
+    expect(isBigInt(Symbol('lorem ipsum'))).toBe(false)
+  })
+
+  test('should return false when given a undefined', () => {
+    expect(isBigInt(undefined)).toBe(false)
+  })
+})
+
+describe('isBool', () => {
+  test('should return true when given a boolean', () => {
+    expect(isBool(true)).toBe(true)
+    expect(isBool(false)).toBe(true)
+  })
+
+  test('should return false when given a bigint', () => {
+    expect(isBool(0n)).toBe(false)
+    expect(isBool(10n)).toBe(false)
+  })
+
+  test('should return false when given a number', () => {
+    expect(isBool(12)).toBe(false)
+    expect(isBool(0)).toBe(false)
+    expect(isBool(-0)).toBe(false)
+    expect(isBool(NaN)).toBe(false)
+  })
+
+  test('should return false when given a string', () => {
+    expect(isBool('lorem ipsum')).toBe(false)
+    expect(isBool('')).toBe(false)
+  })
+
+  test('should return false when given a null', () => {
+    expect(isBool(null)).toBe(false)
+  })
+
+  test('should return false when given a symbol', () => {
+    expect(isBool(Symbol())).toBe(false)
+    expect(isBool(Symbol('lorem ipsum'))).toBe(false)
+  })
+
+  test('should return false when given a undefined', () => {
+    expect(isBool(undefined)).toBe(false)
+  })
+})
+
+describe('isSymbol', () => {
+  test('should return true when given a symbol', () => {
+    expect(isSymbol(Symbol())).toBe(true)
+    expect(isSymbol(Symbol('lorem ipsum'))).toBe(true)
+  })
+
+  test('should return false when given a boolean', () => {
+    expect(isSymbol(true)).toBe(false)
+    expect(isSymbol(false)).toBe(false)
+  })
+
+  test('should return false when given a bigint', () => {
+    expect(isSymbol(0n)).toBe(false)
+    expect(isSymbol(10n)).toBe(false)
+  })
+
+  test('should return false when given a number', () => {
+    expect(isSymbol(12)).toBe(false)
+    expect(isSymbol(0)).toBe(false)
+    expect(isSymbol(-0)).toBe(false)
+    expect(isSymbol(NaN)).toBe(false)
+  })
+
+  test('should return false when given a string', () => {
+    expect(isSymbol('lorem ipsum')).toBe(false)
+    expect(isSymbol('')).toBe(false)
+  })
+
+  test('should return false when given a null', () => {
+    expect(isSymbol(null)).toBe(false)
+  })
+
+  test('should return false when given a undefined', () => {
+    expect(isSymbol(undefined)).toBe(false)
+  })
+})
+
+describe('isNull', () => {
+  test('should return true when given a null', () => {
+    expect(isNull(null)).toBe(true)
+  })
+
+  test('should return false when given a symbol', () => {
+    expect(isNull(Symbol())).toBe(false)
+    expect(isNull(Symbol('lorem ipsum'))).toBe(false)
+  })
+
+  test('should return false when given a boolean', () => {
+    expect(isNull(true)).toBe(false)
+    expect(isNull(false)).toBe(false)
+  })
+
+  test('should return false when given a bigint', () => {
+    expect(isNull(0n)).toBe(false)
+    expect(isNull(10n)).toBe(false)
+  })
+
+  test('should return false when given a number', () => {
+    expect(isNull(12)).toBe(false)
+    expect(isNull(0)).toBe(false)
+    expect(isNull(-0)).toBe(false)
+    expect(isNull(NaN)).toBe(false)
+  })
+
+  test('should return false when given a string', () => {
+    expect(isNull('lorem ipsum')).toBe(false)
+    expect(isNull('')).toBe(false)
+  })
+
+  test('should return false when given a undefined', () => {
+    expect(isNull(undefined)).toBe(false)
   })
 })
