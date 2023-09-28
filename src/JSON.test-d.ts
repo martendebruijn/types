@@ -1,43 +1,42 @@
-import { describe, it } from '@jest/globals'
-import { expectAssignable, expectNotAssignable } from 'jest-tsd'
+import { describe, test, expectTypeOf } from 'vitest'
 import type { JSONValue } from './JSON'
 
 describe('JSONValue', () => {
-  it('should return true when given a string', () =>
-    expectAssignable<JSONValue>(''))
+  test('should match the type when given a string', () =>
+    expectTypeOf('').toMatchTypeOf<JSONValue>())
 
-  it('should return true when given a number', () =>
-    expectAssignable<JSONValue>(10))
+  test('should match the type when given a number', () =>
+    expectTypeOf(10).toMatchTypeOf<JSONValue>())
 
-  it('should return true when given a array of numbers', () =>
-    expectAssignable<JSONValue>([1, 2, 3, 4]))
+  test('should match the type when given a array of numbers', () =>
+    expectTypeOf([1, 2, 3, 4]).toMatchTypeOf<JSONValue>())
 
-  it('should return true when given a object', () =>
-    expectAssignable<JSONValue>({ key: 'value' }))
+  test('should match the type when given a object', () =>
+    expectTypeOf({ key: 'value' }).toMatchTypeOf<JSONValue>())
 
-  it('should return true when given true', () =>
-    expectAssignable<JSONValue>(true))
+  test('should match the type when given true', () =>
+    expectTypeOf(true).toMatchTypeOf<JSONValue>())
 
-  it('should return true when given false', () =>
-    expectAssignable<JSONValue>(false))
+  test('should match the type when given false', () =>
+    expectTypeOf(false).toMatchTypeOf<JSONValue>())
 
-  it('should return true when given null', () =>
-    expectAssignable<JSONValue>(null))
+  test('should match the type when given null', () =>
+    expectTypeOf(null).toMatchTypeOf<JSONValue>())
 
-  it('should return true when given a complex object', () =>
-    expectAssignable<JSONValue>({
+  test('should match the type when given a complex object', () =>
+    expectTypeOf({
       a: [[1, 2, 3, 4], [{ a: 1, b: 2, c: 3 }]],
-    }))
+    }).toMatchTypeOf<JSONValue>())
 
-  it('should return false when given a symbol', () =>
-    expectNotAssignable<JSONValue>(Symbol()))
+  test('should not match the type when given a symbol', () =>
+    expectTypeOf(Symbol()).not.toMatchTypeOf<JSONValue>())
 
-  it('should return false when given a class', () =>
-    expectNotAssignable<JSONValue>(class {}))
+  test('should not match the type when given a class', () =>
+    expectTypeOf(class {}).not.toMatchTypeOf<JSONValue>())
 
-  it('should return false when given a function', () =>
-    expectNotAssignable<JSONValue>(() => ''))
+  test('should not match the type when given a function', () =>
+    expectTypeOf(() => '').not.toMatchTypeOf<JSONValue>())
 
-  it('should return false when given undefined', () =>
-    expectNotAssignable<JSONValue>(undefined))
+  test('should not match the type when given undefined', () =>
+    expectTypeOf(undefined).not.toMatchTypeOf<JSONValue>())
 })
