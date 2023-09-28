@@ -134,6 +134,12 @@ So instead of `npm version`, use the following instructions:
     git push --tags
     ```
 
+9. Publish the new release
+
+   ```sh
+   npm publish
+   ```
+
 ## Guidelines
 
 This project uses [SemVer](https://semver.org/) and Test Driven Development.
