@@ -9,7 +9,7 @@ import {
 } from './guards'
 import { generateError } from './utils'
 
-import type { JSONValue } from './JSON'
+import type { JsonValue, JSONValue } from './JSON'
 import type { Tuple } from './tuple'
 import type { PropsOf } from './vue'
 
@@ -23,4 +23,4 @@ export {
   isNull,
   generateError,
 }
-export type { JSONValue, Tuple, PropsOf }
+export type { JsonValue, JSONValue, Tuple, PropsOf }
