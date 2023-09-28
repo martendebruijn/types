@@ -21,7 +21,7 @@ or experiment.
 ## Get started
 
 ```sh
-npm install @martendebruijn/types
+npm install -D @martendebruijn/types
 ```
 
 ## Usage
