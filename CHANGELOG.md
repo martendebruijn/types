@@ -9,10 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `JsonValue` in favor of `JSONValue`. Casing should be about word spacing only.
-  Using all capitals for an abbreviation makes names harder to read.
 - `JsonPatchOperations` - All possible JSON patch operations
 - `JsonPatch` - A valid JSON patch
+
+### Fixed
+
+- `JsonValue` in favor of `JSONValue`. Casing should be about word spacing only.
+  Using all capitals for an abbreviation makes names harder to read.
 
 ### Deprecated
 
