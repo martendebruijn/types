@@ -11,7 +11,8 @@
     "build:scripts": "tsc --build scripts/tsconfig.json",
     "format": "prettier --write src/ scripts/",
     "lint": "eslint src/**/*.ts",
-    "test": "vitest typecheck",
+    "test": "vitest",
+    "test:types": "vitest typecheck",
     "coverage": "vitest run --coverage"
   },
   "keywords": [
