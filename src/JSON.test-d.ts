@@ -1,57 +1,57 @@
-import { describe, test, expectTypeOf } from 'vitest'
+import { describe, it, expectTypeOf } from 'vitest'
 import type { JsonValue, JsonPatchOperations, JsonPatch } from './JSON'
 
 describe('JsonValue', () => {
-  test('should match the type when given a string', () =>
+  it('should match the type when given a string', () =>
     expectTypeOf('').toMatchTypeOf<JsonValue>())
 
-  test('should match the type when given a number', () =>
+  it('should match the type when given a number', () =>
     expectTypeOf(10).toMatchTypeOf<JsonValue>())
 
-  test('should match the type when given a array of numbers', () =>
+  it('should match the type when given a array of numbers', () =>
     expectTypeOf([1, 2, 3, 4]).toMatchTypeOf<JsonValue>())
 
-  test('should match the type when given a object', () =>
+  it('should match the type when given a object', () =>
     expectTypeOf({ key: 'value' }).toMatchTypeOf<JsonValue>())
 
-  test('should match the type when given true', () =>
+  it('should match the type when given true', () =>
     expectTypeOf(true).toMatchTypeOf<JsonValue>())
 
-  test('should match the type when given false', () =>
+  it('should match the type when given false', () =>
     expectTypeOf(false).toMatchTypeOf<JsonValue>())
 
-  test('should match the type when given null', () =>
+  it('should match the type when given null', () =>
     expectTypeOf(null).toMatchTypeOf<JsonValue>())
 
-  test('should match the type when given a complex object', () =>
+  it('should match the type when given a complex object', () =>
     expectTypeOf({
       a: [[1, 2, 3, 4], [{ a: 1, b: 2, c: 3 }]],
     }).toMatchTypeOf<JsonValue>())
 
-  test('should not match the type when given a symbol', () =>
+  it('should not match the type when given a symbol', () =>
     expectTypeOf(Symbol()).not.toMatchTypeOf<JsonValue>())
 
-  test('should not match the type when given a class', () =>
+  it('should not match the type when given a class', () =>
     expectTypeOf(class {}).not.toMatchTypeOf<JsonValue>())
 
-  test('should not match the type when given a function', () =>
+  it('should not match the type when given a function', () =>
     expectTypeOf(() => '').not.toMatchTypeOf<JsonValue>())
 
-  test('should not match the type when given undefined', () =>
+  it('should not match the type when given undefined', () =>
     expectTypeOf(undefined).not.toMatchTypeOf<JsonValue>())
 })
 
 describe('JsonPatchOperations', () => {
-  test('should allow all JSON patch operations', () => {
+  it('should allow all JSON patch operations', () => {
     expectTypeOf('add' as const).toMatchTypeOf<JsonPatchOperations>()
     expectTypeOf('remove' as const).toMatchTypeOf<JsonPatchOperations>()
     expectTypeOf('replace' as const).toMatchTypeOf<JsonPatchOperations>()
     expectTypeOf('copy' as const).toMatchTypeOf<JsonPatchOperations>()
     expectTypeOf('move' as const).toMatchTypeOf<JsonPatchOperations>()
-    expectTypeOf('test' as const).toMatchTypeOf<JsonPatchOperations>()
+    expectTypeOf('it' as const).toMatchTypeOf<JsonPatchOperations>()
   })
 
-  test('should not allow operations that are not valid JSON patch operations', () => {
+  it('should not allow operations that are not valid JSON patch operations', () => {
     expectTypeOf('duplicate' as const).not.toMatchTypeOf<JsonPatchOperations>()
     expectTypeOf('ad' as const).not.toMatchTypeOf<JsonPatchOperations>()
     expectTypeOf('reomve' as const).not.toMatchTypeOf<JsonPatchOperations>()
@@ -60,7 +60,7 @@ describe('JsonPatchOperations', () => {
 })
 
 describe('JsonPatch', () => {
-  test('should allow valid JSON patch operations', () => {
+  it('should allow valid JSON patch operations', () => {
     const input = [
       { op: 'replace' as const, path: '/baz', value: 'boo' },
       { op: 'add' as const, path: '/hello', value: ['world'] },
@@ -90,7 +90,7 @@ describe('JsonPatch', () => {
     expectTypeOf(input4).toMatchTypeOf<JsonPatch>()
   })
 
-  test('should not allow invalid JSON patch operations', () => {
+  it('should not allow invalid JSON patch operations', () => {
     const input = [
       { op: 'replace' as const, path: '/baz', value: 'boo' },
       { op: 'add' as const, path: '/hello', value: ['world'] },
