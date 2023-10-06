@@ -48,7 +48,7 @@ describe('JsonPatchOperations', () => {
     expectTypeOf('replace' as const).toMatchTypeOf<JsonPatchOperations>()
     expectTypeOf('copy' as const).toMatchTypeOf<JsonPatchOperations>()
     expectTypeOf('move' as const).toMatchTypeOf<JsonPatchOperations>()
-    expectTypeOf('it' as const).toMatchTypeOf<JsonPatchOperations>()
+    expectTypeOf('test' as const).toMatchTypeOf<JsonPatchOperations>()
   })
 
   it('should not allow operations that are not valid JSON patch operations', () => {
