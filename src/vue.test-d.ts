@@ -1,8 +1,8 @@
-import { describe, test, expectTypeOf } from 'vitest'
+import { describe, it, expectTypeOf } from 'vitest'
 import { PropsOf } from './vue'
 
 describe('PropsOf', () => {
-  test('should give the type of the props of the given component when given that component', () => {
+  it('should give the type of the props of the given component when given that component', () => {
     class AwesomeComponent {
       $props = {
         prop: 12,
@@ -16,7 +16,7 @@ describe('PropsOf', () => {
     >()
   })
 
-  test('should give the type of the specific props of the given component when given that component', () => {
+  it('should give the type of the specific props of the given component when given that component', () => {
     class AwesomeComponent {
       $props = {
         propA: 12,
