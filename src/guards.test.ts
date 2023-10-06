@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, isObject, isExactObject} from './guards' /* prettier-ignore */
+import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, isObject } from './guards' /* prettier-ignore */
 
 describe('isDefined', () => {
   it('should return true when given a number', () => {
