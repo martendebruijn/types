@@ -6,6 +6,7 @@ import {
   isBool,
   isSymbol,
   isNull,
+  isArray,
 } from './guards'
 import { generateError } from './utils'
 
@@ -21,6 +22,7 @@ export {
   isBool,
   isSymbol,
   isNull,
+  isArray,
   generateError,
 }
 export type { JsonValue, JSONValue, Tuple, PropsOf }
