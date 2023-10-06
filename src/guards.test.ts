@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, } from './guards' /* prettier-ignore */
+import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, isObject, isExactObject} from './guards' /* prettier-ignore */
 
 describe('isDefined', () => {
   it('should return true when given a number', () => {
@@ -248,5 +248,24 @@ describe('isNull', () => {
 
   it('should return false when given a undefined', () => {
     expect(isNull(undefined)).toBe(false)
+  })
+})
+
+describe('isObject', () => {
+  it('should return true when given an object', () => {
+    expect(isObject({})).toBe(true)
+    expect(isObject({ foo: 12 })).toBe(true)
+    expect(isObject({ foo: 12, bar: true })).toBe(true)
+    expect(isObject({ foo: 12, bar: true, baz: { hello: 'world' } })).toBe(true)
+  })
+
+  it('should return false when given something else than an object', () => {
+    expect(isObject(1)).toBe(false)
+    expect(isObject(true)).toBe(false)
+    expect(isObject(0n)).toBe(false)
+    expect(isObject(new (class {})())).toBe(false)
+    expect(isObject(() => {})).toBe(false)
+    expect(isObject('hello world')).toBe(false)
+    expect(isObject(Symbol())).toBe(false)
   })
 })

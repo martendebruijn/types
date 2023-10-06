@@ -1,5 +1,5 @@
 import { describe, it, expectTypeOf } from 'vitest'
-import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull } from './guards' /* prettier-ignore */
+import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, isObject } from './guards' /* prettier-ignore */
 
 describe('isDefined', () => {
   it('should have a guard value of the type parameter', () => {
@@ -43,5 +43,11 @@ describe('isSymbol', () => {
 describe('isNull', () => {
   it('should have a guard value of null', () => {
     expectTypeOf(isNull).guards.toBeNull()
+  })
+})
+
+describe('isObject', () => {
+  it('should have a guard value of an object', () => {
+    expectTypeOf(isObject).guards.toBeObject()
   })
 })

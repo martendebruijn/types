@@ -126,3 +126,21 @@ export const isSymbol = (x: unknown): x is symbol => typeof x === 'symbol'
  * }
  */
 export const isNull = (x: unknown): x is null => x === null
+
+/**
+ * Check if variable is an object
+ *
+ * @param x Value to check
+ * @returns True if an object, false otherwise
+ *
+ * @example
+ * const possibleObject = { foo: 12 } as string | { foo: number }
+ *  possibleObject.toLowerCase() // Not okay
+ *  if (isObject(possibleObject)) {
+ *    doSomethingElse()
+ *  } else {
+ *    possibleObject.toLowerCase() // Okay
+ * }
+ */
+export const isObject = (x: unknown): x is { [k: PropertyKey]: unknown } =>
+  x != null && x.constructor === Object
