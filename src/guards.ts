@@ -126,3 +126,19 @@ export const isSymbol = (x: unknown): x is symbol => typeof x === 'symbol'
  * }
  */
 export const isNull = (x: unknown): x is null => x === null
+
+/**
+ * Check if variable is an array
+ *
+ * @param x Value to check
+ * @returns True if an array, false otherwise
+ *
+ * @example
+ * const possibleArray = [1,2,3] as number[] | string
+ *  possibleArray.push(4) // Not okay
+ *  if (isArray(possibleArray)) {
+ *    possibleArray.push(4) // Okay
+ * }
+ */
+export const isArray = <T>(x: T): x is T extends unknown[] ? T : never =>
+  Array.isArray(x)
