@@ -2,9 +2,9 @@ import { describe, it, expectTypeOf } from 'vitest'
 import { PartialBy } from './utils'
 
 describe('PartialBy', () => {
-  it("should give an error if K isn't a key of T", () => {})
+  it("should give an error when K isn't a key of T", () => {})
 
-  it("should give an error if T isn't an object/interface", () => {})
+  it("should give an error when T isn't an object/interface", () => {})
 
   describe('when given an interface', () => {
     describe('when given one key', () => {
