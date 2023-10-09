@@ -4,6 +4,7 @@ import { generateError } from './utils'
 import type { JsonValue, JSONValue } from './JSON'
 import type { Tuple } from './tuple'
 import type { PropsOf } from './vue'
+import type { PartialBy } from './utils'
 
 export { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, generateError } /* prettier-ignore */
-export type { JsonValue, JSONValue, Tuple, PropsOf }
+export type { JsonValue, JSONValue, Tuple, PropsOf, PartialBy }

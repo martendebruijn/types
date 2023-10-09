@@ -15,3 +15,5 @@ export function generateError(error: unknown): Error {
   if (error instanceof Error) return error
   else return new Error(`${error}`)
 }
+
+export type PartialBy<T, K extends keyof T> = Omit<T, K> & { [k in K]?: T[K] }

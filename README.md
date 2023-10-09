@@ -47,6 +47,7 @@ npm install @martendebruijn/types
 
 - **[`generateError(error)`](./src/utils.ts)** - Make sure an error is an actual
   error
+- **[`PartialBy`](./src/utils.ts)** - Make a set of keys partial
 
 ### Framework specific
 
