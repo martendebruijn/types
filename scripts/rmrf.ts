@@ -1,8 +1,8 @@
-import { existsSync, lstatSync } from 'node:fs'
-import { rmdir, rm, readdir } from 'node:fs/promises'
 import path from 'node:path'
 import { exit } from 'node:process'
 import { fileURLToPath } from 'node:url'
+import { existsSync, lstatSync } from 'node:fs'
+import { rmdir, rm, readdir } from 'node:fs/promises'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -29,9 +29,7 @@ const deleteDirContent = async (dirPath: string): Promise<void> => {
     }
   }
   const updatedContents = await readdir(dirPath)
-  if (updatedContents.length === 0) {
-    rmdir(dirPath)
-  }
+  if (updatedContents.length === 0) rmdir(dirPath)
 }
 
 if (!existsSync(dirDist)) exit()

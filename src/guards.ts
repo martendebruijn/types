@@ -22,9 +22,8 @@
  *    console.log("I'm defined")
  * }
  */
-export function isDefined<T>(x: T | undefined): x is T {
-  return typeof x !== 'undefined'
-}
+export const isDefined = <T>(x: T | undefined): x is T =>
+  typeof x !== 'undefined'
 
 /**
  * Check if variable is a string
@@ -127,3 +126,37 @@ export const isSymbol = (x: unknown): x is symbol => typeof x === 'symbol'
  * }
  */
 export const isNull = (x: unknown): x is null => x === null
+
+/**
+ * Check if variable is an array
+ *
+ * @param x Value to check
+ * @returns True if an array, false otherwise
+ *
+ * @example
+ * const possibleArray = [1,2,3] as number[] | string
+ *  possibleArray.push(4) // Not okay
+ *  if (isArray(possibleArray)) {
+ *    possibleArray.push(4) // Okay
+ * }
+ */
+export const isArray = <T>(x: T): x is T extends unknown[] ? T : never =>
+  Array.isArray(x)
+
+/**
+ * Check if variable is an object
+ *
+ * @param x Value to check
+ * @returns True if an object, false otherwise
+ *
+ * @example
+ * const possibleObject = { foo: 12 } as string | { foo: number }
+ *  possibleObject.toLowerCase() // Not okay
+ *  if (isObject(possibleObject)) {
+ *    doSomethingElse()
+ *  } else {
+ *    possibleObject.toLowerCase() // Okay
+ * }
+ */
+export const isObject = (x: unknown): x is { [k: PropertyKey]: unknown } =>
+  x != null && x.constructor === Object

@@ -1,12 +1,4 @@
-import {
-  isDefined,
-  isString,
-  isNumber,
-  isBigInt,
-  isBool,
-  isSymbol,
-  isNull,
-} from './guards'
+import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, isObject, isArray } from './guards' /* prettier-ignore */
 import { generateError } from './utils'
 
 import type {
@@ -18,16 +10,7 @@ import type {
 import type { Tuple } from './tuple'
 import type { PropsOf } from './vue'
 
-export {
-  isDefined,
-  isString,
-  isNumber,
-  isBigInt,
-  isBool,
-  isSymbol,
-  isNull,
-  generateError,
-}
+export { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, generateError, isObject, isArray } /* prettier-ignore */
 export type {
   JsonValue,
   JSONValue,

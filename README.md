@@ -1,5 +1,7 @@
 # @martendebruijn/types
 
+![npm](https://img.shields.io/npm/v/%40martendebruijn%2Ftypes?link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40martendebruijn%2Ftypes&labelColor=%23004225&color=%23F5F5DC)
+
 Personal common used types, type guards and other to quickly jumpstart a new project
 or experiment.
 
@@ -33,6 +35,8 @@ npm install @martendebruijn/types
 - **[`isBool(x)`](./src/guards.ts)** - Is x a boolean?
 - **[`isSymbol(x)`](./src/guards.ts)** - Is x a symbol?
 - **[`isNull(x)`](./src/guards.ts)** - Is x null?
+- **[`isArray(x)`](./src/guards.ts)** - Is x an array?
+- **[`isObject(x)`](./src/guards.ts)** - Is x an object?
 
 ### Types
 

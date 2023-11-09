@@ -86,53 +86,59 @@ So instead of `npm version`, use the following instructions:
 1. Update version number in package.json
 2. Update npm
 
-    ```sh
-    npm install
-    ```
+   ```sh
+   npm install
+   ```
 
 3. Add package and package-lock to staged area
 
-    ```sh
-    git add package.json package-lock.json
-    ```
+   ```sh
+   git add package.json package-lock.json
+   ```
 
 4. Commit the changes
 
-    ```sh
-    git commit
-    ```
+   ```sh
+   git commit
+   ```
 
 5. Add changelog to body
 
-    ```md
-    Added:
-  
-    - feature 1
-    - feature 2
-  
-    Fixed:
+   ```md
+   Added:
 
-    - fixed 1
-    - fixed 2
-    ```
+   - feature 1
+   - feature 2
+
+   Fixed:
+
+   - fixed 1
+   - fixed 2
+   ```
 
 6. Push the changes
 
-    ```sh
-    git push
-    ```
+   ```sh
+   git push
+   ```
 
 7. Add a git tag
 
-    ```sh
-    git tag <version>
-    ```
+   ```sh
+   git tag <version>
+   ```
 
 8. Push the tag(s)
 
-    ```sh
-    git push --tags
-    ```
+   ```sh
+   git push --tags
+   ```
+
+9. Publish the new release
+
+   ```sh
+   npm publish
+   ```
 
 ## Guidelines
 
@@ -140,8 +146,7 @@ This project uses [SemVer](https://semver.org/) and Test Driven Development.
 
 ### Testing
 
-See [jest-tsd](https://github.com/0livare/jest-tsd) for creating test suites for
-types.
+See [vitest](https://vitest.dev/) for creating test suites.
 
 #### Naming conventions
 
