@@ -142,3 +142,21 @@ export const isNull = (x: unknown): x is null => x === null
  */
 export const isArray = <T>(x: T): x is T extends unknown[] ? T : never =>
   Array.isArray(x)
+
+/**
+ * Check if variable is an object
+ *
+ * @param x Value to check
+ * @returns True if an object, false otherwise
+ *
+ * @example
+ * const possibleObject = { foo: 12 } as string | { foo: number }
+ *  possibleObject.toLowerCase() // Not okay
+ *  if (isObject(possibleObject)) {
+ *    doSomethingElse()
+ *  } else {
+ *    possibleObject.toLowerCase() // Okay
+ * }
+ */
+export const isObject = (x: unknown): x is { [k: PropertyKey]: unknown } =>
+  x != null && x.constructor === Object

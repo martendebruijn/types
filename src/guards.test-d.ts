@@ -1,5 +1,5 @@
 import { describe, it, expectTypeOf } from 'vitest'
-import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, isArray } from './guards' /* prettier-ignore */
+import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, isArray, isObject } from './guards' /* prettier-ignore */
 
 describe('isDefined', () => {
   it('should have a guard value of the type parameter', () => {
@@ -73,5 +73,9 @@ describe('isArray', () => {
     expectTypeOf(isArray<[{ foo: 12 }, { foo: 13 }]>).guards.toMatchTypeOf<
       { foo: number }[]
     >()
+
+describe('isObject', () => {
+  it('should have a guard value of an object', () => {
+    expectTypeOf(isObject).guards.toBeObject()
   })
 })
