@@ -35,6 +35,7 @@ npm install @martendebruijn/types
 - **[`isBool(x)`](./src/guards.ts)** - Is x a boolean?
 - **[`isSymbol(x)`](./src/guards.ts)** - Is x a symbol?
 - **[`isNull(x)`](./src/guards.ts)** - Is x null?
+- **[`isObject(x)`](./src/guards.ts)** - Is x an object?
 
 ### Types
 
