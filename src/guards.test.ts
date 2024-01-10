@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, } from './guards' /* prettier-ignore */
+import { isDefined, isString, isNumber, isBigInt, isBool, isSymbol, isNull, isArray, isObject  } from './guards' /* prettier-ignore */
 
 describe('isDefined', () => {
   it('should return true when given a number', () => {
@@ -248,5 +248,54 @@ describe('isNull', () => {
 
   it('should return false when given a undefined', () => {
     expect(isNull(undefined)).toBe(false)
+  })
+})
+
+describe('isArray', () => {
+  it('should return true when given an array', () => {
+    expect(isArray([])).toBe(true)
+    expect(isArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toBe(true)
+    expect(isArray([true, false, true])).toBe(true)
+    expect(isArray([undefined, null])).toBe(true)
+    expect(isArray(['hello', 'world'])).toBe(true)
+    expect(
+      isArray([
+        { foo: 12, bar: { baz: 30 } },
+        { foo: 12, bar: { baz: 30 } },
+      ])
+    ).toBe(true)
+    expect(isArray([Symbol(), Symbol()])).toBe(true)
+  })
+
+  it('should return false when given something else than an array', () => {
+    expect(isArray(1)).toBe(false)
+    expect(isArray('hello world')).toBe(false)
+    expect(isArray(0n)).toBe(false)
+    expect(isArray(Symbol())).toBe(false)
+    expect(isArray(new (class {})())).toBe(false)
+    expect(isArray(() => {})).toBe(false)
+    expect(isArray(undefined)).toBe(false)
+    expect(isArray(null)).toBe(false)
+    expect(isArray(NaN)).toBe(false)
+    expect(
+      isArray({ foo: 12, bar: true, baz: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] })
+    ).toBe(false)
+
+describe('isObject', () => {
+  it('should return true when given an object', () => {
+    expect(isObject({})).toBe(true)
+    expect(isObject({ foo: 12 })).toBe(true)
+    expect(isObject({ foo: 12, bar: true })).toBe(true)
+    expect(isObject({ foo: 12, bar: true, baz: { hello: 'world' } })).toBe(true)
+  })
+
+  it('should return false when given something else than an object', () => {
+    expect(isObject(1)).toBe(false)
+    expect(isObject(true)).toBe(false)
+    expect(isObject(0n)).toBe(false)
+    expect(isObject(new (class {})())).toBe(false)
+    expect(isObject(() => {})).toBe(false)
+    expect(isObject('hello world')).toBe(false)
+    expect(isObject(Symbol())).toBe(false)
   })
 })
