@@ -1,6 +1,9 @@
 # @martendebruijn/types
 
-![npm](https://img.shields.io/npm/v/%40martendebruijn%2Ftypes?link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40martendebruijn%2Ftypes&labelColor=%23004225&color=%23F5F5DC)
+<a href="https://www.npmjs.com/package/@martendebruijn/types" title="LinkedIn">
+  <img src="https://img.shields.io/npm/v/%40martendebruijn%2Ftypes?labelColor=%23004225&color=%23F5F5DC"
+    alt="Types library by Marten de Bruijn"/>
+</a>
 
 Personal common used types, type guards and other to quickly jumpstart a new project
 or experiment.
