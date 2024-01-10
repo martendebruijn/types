@@ -73,6 +73,8 @@ describe('isArray', () => {
     expectTypeOf(isArray<[{ foo: 12 }, { foo: 13 }]>).guards.toMatchTypeOf<
       { foo: number }[]
     >()
+  })
+})
 
 describe('isObject', () => {
   it('should have a guard value of an object', () => {

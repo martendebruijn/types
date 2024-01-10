@@ -280,6 +280,8 @@ describe('isArray', () => {
     expect(
       isArray({ foo: 12, bar: true, baz: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] })
     ).toBe(false)
+  })
+})
 
 describe('isObject', () => {
   it('should return true when given an object', () => {
