@@ -1,6 +1,6 @@
 # @martendebruijn/types
 
-<a href="https://www.npmjs.com/package/@martendebruijn/types" title="LinkedIn">
+<a href="https://www.npmjs.com/package/@martendebruijn/types" title="@martendebruijn/types">
   <img src="https://img.shields.io/npm/v/%40martendebruijn%2Ftypes?labelColor=%23004225&color=%23F5F5DC"
     alt="Types library by Marten de Bruijn"/>
 </a>
