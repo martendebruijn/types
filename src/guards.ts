@@ -1,162 +1,131 @@
 /**
- * Type guard to check if a value is defined
- *
- * Where `T` is the type you want to check against
- *
- * @param x Value to check
- * @returns True if defined, false if undefined
+ * Checks if a value is defined.
+ * @param x - The value to check.
+ * @returns `true` if the value is defined, `false` otherwise.
+ * @template T - The type of the value.
  *
  * @example
- * let subject: string | null | undefined = 'foo'
- * if (isDefined(subject)) {
- *    console.log("I'm defined")
- * }
- *
- * subject = undefined
- * if (isDefined(subject)) {
- *    console.log("I'm NOT defined and this block won't run")
- * }
- *
- * subject = null
- * if (isDefined(subject)) {
- *    console.log("I'm defined")
+ * const foo = '' as string | undefined
+ * if (isDefined(foo)) {
+ *  foo.toLowerCase() // Fine
  * }
  */
 export const isDefined = <T>(x: T | undefined): x is T =>
   typeof x !== 'undefined'
 
 /**
- * Check if variable is a string
+ * Checks if a value is a string.
  *
- * @param x Value to check
- * @returns True if a string, false otherwise
+ * @param x - The value to check.
+ * @returns `true` if the value is a string, `false` otherwise.
  *
  * @example
  * const foo = '' as string | number
- * foo.toLowerCase() // Error: Property 'toLowerCase' does not exist on type 'number'.
- *
  * if (isString(foo)) {
  *  foo.toLowerCase() // Fine
-}
+ * }
  */
 export const isString = (x: unknown): x is string => typeof x === 'string'
 
 /**
- * Check if variable is a number
+ * Checks if the provided value is a number.
  *
- * @param x Value to check
- * @returns True if a number, false otherwise
+ * @param x - The value to be checked.
+ * @returns A boolean indicating whether the value is a number or not.
  *
  * @example
- * const foo = 0 as string | number
- * foo.toFixed() // Error: Property 'toFixed' does not exist on type 'string'.
+ * // Returns true
+ * isNumber(42);
  *
- * if (isNumber(foo)) {
- *   foo.toFixed() // Fine
- * }
+ * // Returns false
+ * isNumber('42');
  */
 export const isNumber = (x: unknown): x is number => typeof x === 'number'
 
 /**
- * Check if variable is a BigInt
+ * Checks if the given value is a BigInt.
  *
- * @param x Value to check
- * @returns True if a bigint, false otherwise
+ * @param x - The value to be checked.
+ * @returns A boolean indicating whether the value is a BigInt or not.
  *
  * @example
- * const foo = 0n as bigint | string
- * foo.toLowerCase() // Error: Property 'toLowerCase' does not exist on type 'bigint'.
- *
- * if (isBigInt(foo)) {
- *   doSomethingElse()
+ * // Usage example
+ * const value = 42;
+ * if (isNumber(value)) {
+ *   console.log('The value is a number');
  * } else {
- *   foo.toLowerCase() // Fine
+ *   console.log('The value is not a number');
  * }
  */
 export const isBigInt = (x: unknown): x is bigint => typeof x === 'bigint'
 
 /**
- * Check if variable is a boolean
- *
- * @param x Value to check
- * @returns True if a boolean, false otherwise
+ * Checks if a value is a boolean.
+ * @param x - The value to check.
+ * @returns True if the value is a boolean, false otherwise.
  *
  * @example
- * const foo = false as boolean | string
- * foo.toLowerCase() // Error: Property 'toLowerCase' does not exist on type 'false'.
- *
- * if (isBool(foo)) {
- *   doSomethingElse()
+ * // Usage example
+ * const value = 42;
+ * if (isNumber(value)) {
+ *   console.log('The value is a number');
  * } else {
- *   foo.toLowerCase() // Fine
+ *   console.log('The value is not a number');
  * }
  */
 export const isBool = (x: unknown): x is boolean => typeof x === 'boolean'
 
 /**
- * Check if variable is a symbol
+ * Checks if a value is a symbol.
  *
- * @param x Value to check
- * @returns True if a symbol, false otherwise
+ * @param x - The value to check.
+ * @returns `true` if the value is a symbol, `false` otherwise.
  *
  * @example
- * const foo = Symbol('lorem ipsum') as string | symbol
- * foo.description // Error: Property 'description' does not exist on type 'string'.
- *
- * if (isSymbol(foo)) {
- *   foo.description // Fine
+ * // Usage example
+ * if (isString(value)) {
+ *   console.log('The value is a string');
+ * } else {
+ *   console.log('The value is not a string');
  * }
  */
 export const isSymbol = (x: unknown): x is symbol => typeof x === 'symbol'
 
 /**
- * Check if variable is null
+ * Checks if a value is null.
  *
- * @param x Value to check
- * @returns True if null, false otherwise
+ * @param x - The value to check.
+ * @returns A boolean indicating whether the value is null.
  *
  * @example
- * const foo = null as null | string
- * foo.toLowerCase() // Error: 'foo' is possibly 'null'.
- *
- * if (isNull(foo)) {
- *   doSomethingElse()
- * } else {
- *   foo.toLowerCase() // Fine
- * }
+ * const result = isNull(null); // true
  */
 export const isNull = (x: unknown): x is null => x === null
 
 /**
- * Check if variable is an array
+ * Checks if a value is an array.
  *
- * @param x Value to check
- * @returns True if an array, false otherwise
+ * @param value - The value to check.
+ * @returns `true` if the value is an array, `false` otherwise.
  *
  * @example
- * const possibleArray = [1,2,3] as number[] | string
- *  possibleArray.push(4) // Not okay
- *  if (isArray(possibleArray)) {
- *    possibleArray.push(4) // Okay
- * }
+ * console.log(isArray([])); // Output: true
+ * console.log(isArray([1, 2, 3])); // Output: true
+ * console.log(isArray("not an array")); // Output: false
  */
 export const isArray = <T>(x: T): x is T extends unknown[] ? T : never =>
   Array.isArray(x)
 
 /**
- * Check if variable is an object
- *
- * @param x Value to check
- * @returns True if an object, false otherwise
- *
+ * Checks if the given value is an object.
+ * @param x The value to check.
+ * @returns `true` if the value is an object, `false` otherwise.
  * @example
- * const possibleObject = { foo: 12 } as string | { foo: number }
- *  possibleObject.toLowerCase() // Not okay
- *  if (isObject(possibleObject)) {
- *    doSomethingElse()
- *  } else {
- *    possibleObject.toLowerCase() // Okay
- * }
+ * const obj = { name: 'John', age: 30 };
+ * console.log(isObject(obj)); // Output: true
+ *
+ * const arr = [1, 2, 3];
+ * console.log(isObject(arr)); // Output: false
  */
 export const isObject = (x: unknown): x is { [k: PropertyKey]: unknown } =>
   x != null && x.constructor === Object

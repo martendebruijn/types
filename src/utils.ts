@@ -1,15 +1,14 @@
 /**
- * Make sure to throw an actual error
- *
- * @param error An unknown thrown
- * @returns An error to be thrown
+ * Generates an Error object from the provided error.
+ * If the error is already an instance of Error, it is returned as is.
+ * Otherwise, a new Error object is created with the error message.
+ * @param error - The error to generate an Error object from.
+ * @returns The generated Error object.
  *
  * @example
- *  try {
- *   foo()
- * } catch (error) {
- *   throw generateError(error)
- * }
+ * const error = generateError('Something went wrong');
+ * console.log(error instanceof Error); // true
+ * console.log(error.message); // 'Something went wrong'
  */
 export function generateError(error: unknown): Error {
   if (error instanceof Error) return error

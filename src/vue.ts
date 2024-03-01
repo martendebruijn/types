@@ -1,15 +1,8 @@
 /**
- * Get the prop types of a given component
+ * Retrieves the props type of a Vue component class.
  *
- * @example
- *  import MyComponent from 'MyComponent.vue'
- *
- *  // Get all prop types
- *  PropsOf<typeof MyComponent>
- *
- *  // Get type of specific prop
- *  PropsOf<typeof MyComponent>["prop"]
- *
+ * @typeparam C - The Vue component class.
+ * @returns The props type of the component class.
  */
 export type PropsOf<C extends abstract new (...args: never[]) => void> =
   InstanceType<C> extends { $props: unknown }
