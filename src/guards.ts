@@ -129,10 +129,10 @@ export const isArray = <T>(x: T): x is T extends unknown[] ? T : never =>
  * @returns `true` if the value is an object, `false` otherwise.
  * @example
  * // Returns true
- * isArray({ name: 'John', age: 30 })
+ * isObject({ name: 'John', age: 30 })
  *
  * // Returns false
- * isArray([1, 2, 3])
+ * isObject([1, 2, 3])
  */
 export const isObject = (x: unknown): x is { [k: PropertyKey]: unknown } =>
   x != null && x.constructor === Object
