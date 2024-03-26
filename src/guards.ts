@@ -49,13 +49,11 @@ export const isNumber = (x: unknown): x is number => typeof x === 'number'
  * @returns A boolean indicating whether the value is a BigInt or not.
  *
  * @example
- * // Usage example
- * const value = 42;
- * if (isNumber(value)) {
- *   console.log('The value is a number');
- * } else {
- *   console.log('The value is not a number');
- * }
+ * // Returns true
+ * isBigint(BigInt(9007199254740991));
+ *
+ * // Returns false
+ * isBigint('9007199254740991');
  */
 export const isBigInt = (x: unknown): x is bigint => typeof x === 'bigint'
 
@@ -65,13 +63,11 @@ export const isBigInt = (x: unknown): x is bigint => typeof x === 'bigint'
  * @returns True if the value is a boolean, false otherwise.
  *
  * @example
- * // Usage example
- * const value = 42;
- * if (isNumber(value)) {
- *   console.log('The value is a number');
- * } else {
- *   console.log('The value is not a number');
- * }
+ * // Returns true
+ * isBool(false);
+ *
+ * // Returns false
+ * isBool('false');
  */
 export const isBool = (x: unknown): x is boolean => typeof x === 'boolean'
 
@@ -82,12 +78,11 @@ export const isBool = (x: unknown): x is boolean => typeof x === 'boolean'
  * @returns `true` if the value is a symbol, `false` otherwise.
  *
  * @example
- * // Usage example
- * if (isString(value)) {
- *   console.log('The value is a string');
- * } else {
- *   console.log('The value is not a string');
- * }
+ * // Returns true
+ * isSymbol(Symbol('symbol'));
+ *
+ * // Returns false
+ * isSymbol('false');
  */
 export const isSymbol = (x: unknown): x is symbol => typeof x === 'symbol'
 
@@ -98,7 +93,11 @@ export const isSymbol = (x: unknown): x is symbol => typeof x === 'symbol'
  * @returns A boolean indicating whether the value is null.
  *
  * @example
- * const result = isNull(null); // true
+ * // Returns true
+ * isNull(null);
+ *
+ * // Returns false
+ * isNull('false');
  */
 export const isNull = (x: unknown): x is null => x === null
 
@@ -109,9 +108,17 @@ export const isNull = (x: unknown): x is null => x === null
  * @returns `true` if the value is an array, `false` otherwise.
  *
  * @example
- * console.log(isArray([])); // Output: true
- * console.log(isArray([1, 2, 3])); // Output: true
- * console.log(isArray("not an array")); // Output: false
+ * // Returns true
+ * isArray([12])
+ *
+ * // Returns false
+ * isArray(12)
+ *
+ * // Returns true
+ * isArray<string[]>(['12'])
+ *
+ * // Returns false
+ * isArray<string[]>([12])
  */
 export const isArray = <T>(x: T): x is T extends unknown[] ? T : never =>
   Array.isArray(x)
@@ -121,11 +128,11 @@ export const isArray = <T>(x: T): x is T extends unknown[] ? T : never =>
  * @param x The value to check.
  * @returns `true` if the value is an object, `false` otherwise.
  * @example
- * const obj = { name: 'John', age: 30 };
- * console.log(isObject(obj)); // Output: true
+ * // Returns true
+ * isArray({ name: 'John', age: 30 })
  *
- * const arr = [1, 2, 3];
- * console.log(isObject(arr)); // Output: false
+ * // Returns false
+ * isArray([1, 2, 3])
  */
 export const isObject = (x: unknown): x is { [k: PropertyKey]: unknown } =>
   x != null && x.constructor === Object
