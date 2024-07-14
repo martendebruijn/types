@@ -7,6 +7,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+#### Guards
+
+- `isDate`
+- `isInfinity`
+- `isNan`
+- `isUndefined`
+
+#### Type
+
+- `Variant`
+- `Mode`
+- `Size`
+- `Direction`
+- `Sizing`
+
+### Changed
+
+- Rewrote `guards.ts` to have each guard in a seperate file
+- Rewrote `JSON.ts` to seperate `JsonValue` and `JsonPatch` types
+
+### Breaking Changes
+
+#### Removed
+
+- Vue `propsOf` – I'm currently not using Vue, which is why I'm removing Vue specific
+  types
+- `JSONValue`, use `JsonValue` instead
+- `Tuple` type, because the type wasn't correct
+
+<!-- ## [2.0.0] - 2024-MM-dd -->
+
 ## [1.4.0] - 2024-01-10
 
 ### Added

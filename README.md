@@ -14,8 +14,6 @@ or experiment.
     - [Type guards](#type-guards)
     - [Types](#types)
     - [Utility](#utility)
-    - [Framework specific](#framework-specific)
-      - [Vue](#vue)
   - [Releases](#releases)
   - [Contributing](#contributing)
   - [Authors and acknowledgment](#authors-and-acknowledgment)
@@ -31,34 +29,29 @@ npm install @martendebruijn/types
 
 ### Type guards
 
-- **[`isDefined(x)`](./src/guards.ts)** - Is x defined?
-- **[`isString(x)`](./src/guards.ts)** - Is x a string?
-- **[`isNumber(x)`](./src/guards.ts)** - Is x a number?
-- **[`isBigInt(x)`](./src/guards.ts)** - Is x a bigint?
-- **[`isBool(x)`](./src/guards.ts)** - Is x a boolean?
-- **[`isSymbol(x)`](./src/guards.ts)** - Is x a symbol?
-- **[`isNull(x)`](./src/guards.ts)** - Is x null?
-- **[`isArray(x)`](./src/guards.ts)** - Is x an array?
-- **[`isObject(x)`](./src/guards.ts)** - Is x an object?
+- **[`isArray(x)`](./src/guards/isArray.ts)** - Is x an array?
+- **[`isBigInt(x)`](./src/guards/isBigInt.ts)** - Is x an array?
+- **[`isBool(x)`](./src/guards/isBool.ts)** - Is x an array?
+- **[`isDate(x)`](./src/guards/isDate.ts)** - Is x an array?
+- **[`isDefined(x)`](./src/guards/isDefined.ts)** - Is x an array?
+- **[`isInfinity(x)`](./src/guards/isInfinity.ts)** - Is x an array?
+- **[`isNan(x)`](./src/guards/isNan.ts)** - Is x an array?
+- **[`isNull(x)`](./src/guards/isNull.ts)** - Is x an array?
+- **[`isNumber(x)`](./src/guards/isNumber.ts)** - Is x an array?
+- **[`isObject(x)`](./src/guards/isObject.ts)** - Is x an array?
+- **[`isString(x)`](./src/guards/isString.ts)** - Is x an array?
+- **[`isSymbol(x)`](./src/guards/isSymbol.ts)** - Is x an array?
+- **[`isUndefined(x)`](./src/guards/isUndefined.ts)** - Is x an array?
 
 ### Types
 
-- **[`Tuple`](./src/tuple.ts)** - Tuple type
-- **[`JsonValue`](./src/JSON.ts)** - A valid JSON value
-- **[`JsonPatchOperations`](./src/JSON.ts)** - All possible JSON patch operations
-- **[`JsonPatch`](./src/JSON.ts)** - A valid JSON patch
+- **[`JsonValue`](./src/json/jsonValue.ts)** - A valid JSON value
+- **[`JsonPatch`](./src/json/jsonPatch.ts)** - A valid JSON patch operation
 
 ### Utility
 
-- **[`generateError(error)`](./src/utils.ts)** - Make sure an error is an actual
-  error
-
-### Framework specific
-
-#### Vue
-
-- **[`PropsOf<VueComponent>`](./src/vue.ts)** - Get the types of the properties
-  of a Vue component
+- **[`generateError(error)`](./src/utils/generateError.ts)** - Make sure an error
+  is an actual error
 
 ## Releases
 
