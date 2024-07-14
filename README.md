@@ -30,18 +30,18 @@ npm install @martendebruijn/types
 ### Type guards
 
 - **[`isArray(x)`](./src/guards/isArray.ts)** - Is x an array?
-- **[`isBigInt(x)`](./src/guards/isBigInt.ts)** - Is x an array?
-- **[`isBool(x)`](./src/guards/isBool.ts)** - Is x an array?
-- **[`isDate(x)`](./src/guards/isDate.ts)** - Is x an array?
-- **[`isDefined(x)`](./src/guards/isDefined.ts)** - Is x an array?
-- **[`isInfinity(x)`](./src/guards/isInfinity.ts)** - Is x an array?
-- **[`isNan(x)`](./src/guards/isNan.ts)** - Is x an array?
-- **[`isNull(x)`](./src/guards/isNull.ts)** - Is x an array?
-- **[`isNumber(x)`](./src/guards/isNumber.ts)** - Is x an array?
-- **[`isObject(x)`](./src/guards/isObject.ts)** - Is x an array?
-- **[`isString(x)`](./src/guards/isString.ts)** - Is x an array?
-- **[`isSymbol(x)`](./src/guards/isSymbol.ts)** - Is x an array?
-- **[`isUndefined(x)`](./src/guards/isUndefined.ts)** - Is x an array?
+- **[`isBigInt(x)`](./src/guards/isBigInt.ts)** - Is x a BigInt?
+- **[`isBool(x)`](./src/guards/isBool.ts)** - Is x a Boolean?
+- **[`isDate(x)`](./src/guards/isDate.ts)** - Is x a Date?
+- **[`isDefined(x)`](./src/guards/isDefined.ts)** - Is x Defined?
+- **[`isInfinity(x)`](./src/guards/isInfinity.ts)** - Is x Infinity?
+- **[`isNan(x)`](./src/guards/isNan.ts)** - Is x NaN?
+- **[`isNull(x)`](./src/guards/isNull.ts)** - Is x Null?
+- **[`isNumber(x)`](./src/guards/isNumber.ts)** - Is x a Number?
+- **[`isObject(x)`](./src/guards/isObject.ts)** - Is x an Object?
+- **[`isString(x)`](./src/guards/isString.ts)** - Is x a String?
+- **[`isSymbol(x)`](./src/guards/isSymbol.ts)** - Is x a Symbol?
+- **[`isUndefined(x)`](./src/guards/isUndefined.ts)** - Is x Undefined?
 
 ### Types
 
