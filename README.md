@@ -13,6 +13,8 @@ or experiment.
   - [Usage](#usage)
     - [Type guards](#type-guards)
     - [Types](#types)
+      - [JSON](#json)
+      - [Props](#props)
     - [Utility](#utility)
   - [Releases](#releases)
   - [Contributing](#contributing)
@@ -45,8 +47,18 @@ npm install @martendebruijn/types
 
 ### Types
 
+#### JSON
+
 - **[`JsonValue`](./src/json/jsonValue.ts)** - A valid JSON value
 - **[`JsonPatch`](./src/json/jsonPatch.ts)** - A valid JSON patch operation
+
+#### Props
+
+- **[`Variant`](./src/props/commonProps.ts)** - Standard variants
+- **[`Mode`](./src/props/commonProps.ts)** - Light or dark mode
+- **[`Size`](./src/props/commonProps.ts)** - Standard sizes
+- **[`Direction`](./src/props/commonProps.ts)** - Standard directions
+- **[`Sizing`](./src/props/commonProps.ts)** - Standard sizing
 
 ### Utility
 
