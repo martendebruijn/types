@@ -6,5 +6,8 @@ export default defineConfig({
       ignoreSourceErrors: true,
       tsconfig: './src/tsconfig.json',
     },
+    coverage: {
+      exclude: ['*/**/main.ts'],
+    },
   },
 })

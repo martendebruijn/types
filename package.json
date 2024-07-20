@@ -13,7 +13,7 @@
     "format": "prettier --write src/ scripts/",
     "lint": "eslint src/**/*.ts",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage"
   },
   "keywords": [
     "types",
