@@ -1,6 +1,5 @@
 {
   "name": "@martendebruijn/types",
-  "version": "1.4.0",
   "description": "Personal common used types, type guards and other to quickly jumpstart a new project or experiment",
   "author": "Marten de Bruijn <martendebruijn@outlook.com> (https://github.com/martendebruijn)",
   "main": "dist/index.js",
