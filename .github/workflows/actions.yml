@@ -50,5 +50,5 @@ jobs:
       - run: npm config set allow-same-version true
       - run: npm config set git-tag-version false
       - run: npm run build
-      - run: npm version ${ GITHUB_REF_NAME }
+      - run: npm version ${{ github.ref.name }}
       - run: npm publish
