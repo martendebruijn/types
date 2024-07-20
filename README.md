@@ -44,6 +44,7 @@ npm install @martendebruijn/types
 - **[`isNegative(x)`](./src/guards/isNegative.ts)** - Is x negative?
 - **[`isNumber(x)`](./src/guards/isNumber.ts)** - Is x a Number?
 - **[`isObject(x)`](./src/guards/isObject.ts)** - Is x an Object?
+- **[`isOdd(x)`](./src/guards/isOdd.ts)** - Is x odd?
 - **[`isString(x)`](./src/guards/isString.ts)** - Is x a String?
 - **[`isSymbol(x)`](./src/guards/isSymbol.ts)** - Is x a Symbol?
 - **[`isUndefined(x)`](./src/guards/isUndefined.ts)** - Is x Undefined?
