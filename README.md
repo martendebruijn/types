@@ -41,7 +41,7 @@ npm install @martendebruijn/types
 - **[`isInfinity(x)`](./src/guards/isInfinity.ts)** - Is x Infinity?
 - **[`isMap(x)`](./src/guards/isMap.ts)** - Is x a Map?
 - **[`isNan(x)`](./src/guards/isNan.ts)** - Is x NaN?
-- **[`isNull(x)`](./src/guards/isNull.ts)** - Is x Null?
+- **[`isNegative(x)`](./src/guards/isNegative.ts)** - Is x negative?
 - **[`isNumber(x)`](./src/guards/isNumber.ts)** - Is x a Number?
 - **[`isObject(x)`](./src/guards/isObject.ts)** - Is x an Object?
 - **[`isString(x)`](./src/guards/isString.ts)** - Is x a String?
