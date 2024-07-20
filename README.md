@@ -49,6 +49,7 @@ npm install @martendebruijn/types
 - **[`isString(x)`](./src/guards/isString.ts)** - Is x a String?
 - **[`isSymbol(x)`](./src/guards/isSymbol.ts)** - Is x a Symbol?
 - **[`isUndefined(x)`](./src/guards/isUndefined.ts)** - Is x Undefined?
+- **[`isWeakMap(x)`](./src/guards/isWeakMap.ts)** - Is x a Weak Map?
 
 ### Types
 
