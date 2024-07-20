@@ -28,6 +28,7 @@ jobs:
           path: coverage/**/*
 
   build:
+    needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
