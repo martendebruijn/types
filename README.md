@@ -31,17 +31,20 @@ npm install @martendebruijn/types
 
 ### Type guards
 
-- **[`isArray(x)`](./src/guards/isArray.ts)** - Is x an array?
+- **[`isArray(x)`](./src/guards/isArray.ts)** - Is x an Array?
 - **[`isBigInt(x)`](./src/guards/isBigInt.ts)** - Is x a BigInt?
 - **[`isBool(x)`](./src/guards/isBool.ts)** - Is x a Boolean?
 - **[`isDate(x)`](./src/guards/isDate.ts)** - Is x a Date?
+- **[`isNull(x)`](./src/guards/isNull.ts)** - Is x Null?
 - **[`isDefined(x)`](./src/guards/isDefined.ts)** - Is x Defined?
 - **[`isEven(x)`](./src/guards/isEven.ts)** - Is x even?
 - **[`isFloat(x)`](./src/guards/isFloat.ts)** - Is x a float?
 - **[`isInfinity(x)`](./src/guards/isInfinity.ts)** - Is x Infinity?
+- **[`isInteger(x)`](./src/guards/isInteger.ts)** - Is x an integer?
 - **[`isMap(x)`](./src/guards/isMap.ts)** - Is x a Map?
 - **[`isNan(x)`](./src/guards/isNan.ts)** - Is x NaN?
 - **[`isNegative(x)`](./src/guards/isNegative.ts)** - Is x negative?
+- **[`isNull(x)`](./src/guards/isNull.ts)** - Is x null?
 - **[`isNumber(x)`](./src/guards/isNumber.ts)** - Is x a Number?
 - **[`isObject(x)`](./src/guards/isObject.ts)** - Is x an Object?
 - **[`isOdd(x)`](./src/guards/isOdd.ts)** - Is x odd?
