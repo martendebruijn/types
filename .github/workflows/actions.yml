@@ -53,3 +53,5 @@ jobs:
       - run: npm run build
       - run: npm version ${{ github.ref_name }}
       - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
