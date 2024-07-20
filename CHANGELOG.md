@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2024-07-21
+
 ### Added
 
 #### Guards
@@ -41,7 +43,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Tuple` type, because the type wasn't correct
 - `generateError()` – moved to a different utils repository
 
-<!-- ## [2.0.0] - 2024-MM-dd -->
+## 0.0.17 - 2024-07-21
+
+This "release" came to be to test the publish job in the ci/cd and should not
+be recognized as an official release.
 
 ## [1.4.0] - 2024-01-10
 
@@ -96,7 +101,8 @@ Forgot to build dist.
 
 First release.
 
-[unreleased]: https://github.com/martendebruijn/types/compare/1.4.0...HEAD
+[unreleased]: https://github.com/martendebruijn/types/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/martendebruijn/types/compare/1.4.0...2.0.0
 [1.4.0]: https://github.com/martendebruijn/types/compare/1.3.0...1.4.0
 [1.3.0]: https://github.com/martendebruijn/types/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/martendebruijn/types/compare/1.1.1...1.2.0
