@@ -37,6 +37,7 @@ npm install @martendebruijn/types
 - **[`isDate(x)`](./src/guards/isDate.ts)** - Is x a Date?
 - **[`isDefined(x)`](./src/guards/isDefined.ts)** - Is x Defined?
 - **[`isEven(x)`](./src/guards/isEven.ts)** - Is x even?
+- **[`isFloat(x)`](./src/guards/isFloat.ts)** - Is x a float?
 - **[`isInfinity(x)`](./src/guards/isInfinity.ts)** - Is x Infinity?
 - **[`isNan(x)`](./src/guards/isNan.ts)** - Is x NaN?
 - **[`isNull(x)`](./src/guards/isNull.ts)** - Is x Null?
