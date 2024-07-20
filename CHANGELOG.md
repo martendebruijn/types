@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `isPositive`
 - `isSet`
 - `isWeakMap`
+- `isWeakSet`
 
 ### Changed
 
@@ -38,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   types
 - `JSONValue`, use `JsonValue` instead
 - `Tuple` type, because the type wasn't correct
+- `generateError()` – moved to a different utils repository
 
 <!-- ## [2.0.0] - 2024-MM-dd -->
 

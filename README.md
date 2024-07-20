@@ -51,6 +51,7 @@ npm install @martendebruijn/types
 - **[`isSymbol(x)`](./src/guards/isSymbol.ts)** - Is x a Symbol?
 - **[`isUndefined(x)`](./src/guards/isUndefined.ts)** - Is x Undefined?
 - **[`isWeakMap(x)`](./src/guards/isWeakMap.ts)** - Is x a Weak Map?
+- **[`isWeakSet(x)`](./src/guards/isWeakSet.ts)** - Is x a Weak Set?
 
 ### Types
 
