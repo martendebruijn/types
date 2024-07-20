@@ -37,3 +37,18 @@ jobs:
           node-version: 22
       - run: npm ci
       - run: npm run build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm config set allow-same-version true
+      - run: npm config set git-tag-version false
+      - run: npm run build
+      - run: npm version "$CI_COMMIT_TAG"
+      - run: npm publish
