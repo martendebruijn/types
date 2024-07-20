@@ -1,5 +1,6 @@
 export * from './isArray'
 export * from './isBool'
+export * from './isEven'
 export * from './isNull'
 export * from './isNumber'
 export * from './isObject'

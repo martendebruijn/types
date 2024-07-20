@@ -15,14 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `isInfinity`
 - `isNan`
 - `isUndefined`
-
-#### Type
-
-- `Variant`
-- `Mode`
-- `Size`
-- `Direction`
-- `Sizing`
+- `isEven`
 
 ### Changed
 
