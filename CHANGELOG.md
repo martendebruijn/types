@@ -7,19 +7,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+#### Guards
+
+- `isDate`
+- `isInfinity`
+- `isNan`
+- `isUndefined`
+- `isEven`
+- `isFloat`
+- `isInteger`
+- `isMap`
+- `isNegative`
+- `isOdd`
+- `isPositive`
+- `isSet`
+- `isWeakMap`
+- `isWeakSet`
+
+### Changed
+
+- Rewrote `guards.ts` to have each guard in a seperate file
+- Rewrote `JSON.ts` to seperate `JsonValue` and `JsonPatch` types
+
+### Breaking Changes
+
+#### Removed
+
+- Vue `propsOf` – I'm currently not using Vue, which is why I'm removing Vue specific
+  types
+- `JSONValue`, use `JsonValue` instead
+- `Tuple` type, because the type wasn't correct
+- `generateError()` – moved to a different utils repository
+
+<!-- ## [2.0.0] - 2024-MM-dd -->
+
 ## [1.4.0] - 2024-01-10
 
 ### Added
 
 - `JsonPatchOperations` - All possible JSON patch operations
 - `JsonPatch` - A valid JSON patch
+- `isArray(x)` - Is x an array?
+- `isObject(x)` - Is x an object?
 
 ### Fixed
 
 - `JsonValue` in favor of `JSONValue`. Casing should be about word spacing only.
   Using all capitals for an abbreviation makes names harder to read.
-- `isArray(x)` - Is x an array?
-- `isObject(x)` - Is x an object?
 
 ### Deprecated
 

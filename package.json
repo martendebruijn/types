@@ -12,7 +12,7 @@
     "build:scripts": "tsc --build scripts/tsconfig.json",
     "format": "prettier --write src/ scripts/",
     "lint": "eslint src/**/*.ts",
-    "test": "vitest --typecheck",
+    "test": "vitest",
     "coverage": "vitest run --coverage"
   },
   "keywords": [
@@ -32,16 +32,16 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@tsconfig/node18": "^18.2.2",
-    "@tsconfig/recommended": "^1.0.3",
-    "@types/node": "^20.11.21",
-    "@typescript-eslint/eslint-plugin": "^7.1.0",
-    "@typescript-eslint/parser": "^7.1.0",
-    "@vitest/coverage-v8": "^1.3.1",
-    "eslint": "^8.57.0",
+    "@tsconfig/node18": "^18.2.4",
+    "@tsconfig/recommended": "^1.0.7",
+    "@types/node": "^20.14.11",
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "@typescript-eslint/parser": "^7.16.1",
+    "@vitest/coverage-v8": "^2.0.3",
+    "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "3.2.5",
-    "typescript": "5.3.3",
-    "vitest": "1.3.1"
+    "prettier": "3.3.3",
+    "typescript": "5.5.3",
+    "vitest": "^2.0.3"
   }
 }
