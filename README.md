@@ -83,4 +83,4 @@ For a full list of contributors, please see the [contributors list](https://gith
 
 [MIT](./LICENSE) license
 
-Copyright (c) 2023 [Marten de Bruijn](https://github.com/martendebruijn)
+Copyright © 2023 [Marten de Bruijn](https://github.com/martendebruijn)
