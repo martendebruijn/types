@@ -105,7 +105,8 @@ Forgot to build dist.
 
 First release.
 
-[unreleased]: https://github.com/martendebruijn/types/compare/2.0.0...HEAD
+[unreleased]: https://github.com/martendebruijn/types/compare/2.0.1...HEAD
+[2.0.1]: https://github.com/martendebruijn/types/compare/1.4.0...2.0.1
 [2.0.0]: https://github.com/martendebruijn/types/compare/1.4.0...2.0.0
 [1.4.0]: https://github.com/martendebruijn/types/compare/1.3.0...1.4.0
 [1.3.0]: https://github.com/martendebruijn/types/compare/1.2.0...1.3.0
