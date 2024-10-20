@@ -30,7 +30,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@eslint/compat": "^1.2.1",
     "@tsconfig/node20": "^20.1.4",
     "@tsconfig/recommended": "^1.0.7",
     "@types/node": "^22.7.7",

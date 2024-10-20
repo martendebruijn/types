@@ -1,7 +1,6 @@
 // @ts-check
 
 import eslint from '@eslint/js'
-import { fixupPluginRules } from '@eslint/compat';
 import tseslint from 'typescript-eslint'
 import eslintConfigPrettier from 'eslint-config-prettier'
 
