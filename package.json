@@ -2,9 +2,9 @@
   "name": "@martendebruijn/types",
   "description": "Personal common used types, type guards and other to quickly jumpstart a new project or experiment",
   "author": "Marten de Bruijn <martendebruijn@outlook.com> (https://github.com/martendebruijn)",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "type": "module",
-  "types": "dist/index.d.ts",
+  "types": "dist/main.d.ts",
   "scripts": {
     "build": "tsc --build src/tsconfig.json",
     "build:scripts": "tsc --build scripts/tsconfig.json",
