@@ -8,6 +8,7 @@
   "scripts": {
     "build": "tsc --build src/tsconfig.json",
     "build:scripts": "tsc --build scripts/tsconfig.json",
+    "build:docs": "node ./scripts/copy.js",
     "format": "prettier --write src/ scripts/",
     "lint": "eslint src/**/*.ts",
     "test": "vitest",
@@ -30,6 +31,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@martendebruijn/css": "^1.1.0",
     "@tsconfig/node22": "^22.0.0",
     "@tsconfig/recommended": "^1.0.8",
     "@types/node": "^22.10.2",
