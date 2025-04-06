@@ -7,7 +7,7 @@ export default defineConfig({
       tsconfig: './src/tsconfig.json',
     },
     coverage: {
-      exclude: ['*/**/main.ts'],
+      exclude: ['*/**/main.ts', 'dist', '*.config.*', 'scripts'],
     },
   },
 })
