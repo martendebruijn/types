@@ -49,4 +49,16 @@ describe('isPositive', () => {
 
     expect(isPositive(input)).toBe(false)
   })
+
+  it('should return false when given a string', () => {
+    const input = 'foobar'
+
+    expect(isPositive(input)).toBe(false)
+  })
+
+  it('should return false when given a symbol', () => {
+    const input = Symbol('foobar')
+
+    expect(isPositive(input)).toBe(false)
+  })
 })
