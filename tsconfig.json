@@ -1,8 +1,23 @@
 {
-  "include": ["src/**/*", "scripts/**/*"],
-  "exclude": ["src/*test*.*"],
+  "include": [
+    "src/**/*",
+    "scripts/**/*"
+  ],
   "compilerOptions": {
     "noUncheckedIndexedAccess": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "strict": true,
+    "types": [
+      "bun-types"
+    ]
   }
 }
