@@ -6,13 +6,12 @@
   "type": "module",
   "types": "dist/main.d.ts",
   "scripts": {
-    "build": "tsc --build src/tsconfig.json",
-    "build:scripts": "tsc --build scripts/tsconfig.json",
-    "build:docs": "node ./scripts/copy.js",
+    "build": "bun build src/main.ts",
+    "build:docs": "bun ./scripts/copy.ts",
     "format": "prettier --write src/ scripts/",
     "lint": "eslint src/**/*.ts",
-    "test": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test": "bun test",
+    "test:coverage": "bun test --coverage"
   },
   "keywords": [
     "types",
@@ -34,15 +33,13 @@
     "@martendebruijn/css": "^1.1.0",
     "@tsconfig/node22": "^22.0.0",
     "@tsconfig/recommended": "^1.0.8",
-    "@types/node": "^22.10.7",
     "@typescript-eslint/eslint-plugin": "^8.20.0",
     "@typescript-eslint/parser": "^8.20.0",
-    "@vitest/coverage-v8": "^2.1.8",
+    "bun-types": "^1.2.11",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "3.4.2",
     "typescript": "5.7.3",
-    "typescript-eslint": "^8.20.0",
-    "vitest": "^2.0.3"
+    "typescript-eslint": "^8.20.0"
   }
 }

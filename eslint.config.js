@@ -12,7 +12,6 @@ export default tseslint.config(
     ignores: ["**/*.{js,mjs,cjs,d.ts}"]
   },
   {
-    name: "MICE/base",
     settings: {
       "react": {
         version: "detect"

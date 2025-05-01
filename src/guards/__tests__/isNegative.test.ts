@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect } from 'bun:test'
 import isNegative from '../isNegative'
 
 describe('isNegative', () => {
@@ -48,5 +48,17 @@ describe('isNegative', () => {
     const input = -0
 
     expect(isNegative(input)).toBe(true)
+  })
+
+  it('should return false when given a string', () => {
+    const input = 'foobar'
+
+    expect(isNegative(input)).toBe(false)
+  })
+
+  it('should return false when given a symbol', () => {
+    const input = Symbol('foobar')
+
+    expect(isNegative(input)).toBe(false)
   })
 })
