@@ -6,6 +6,6 @@
     "esModuleInterop": true,
     "module": "esnext",
     "target": "es2020",
-    "moduleResolution": "bundler"
+    "moduleResolution": "node"
   }
 }

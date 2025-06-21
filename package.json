@@ -6,7 +6,7 @@
   "type": "module",
   "types": "dist/main.d.ts",
   "scripts": {
-    "build": "tsc --build src/tsconfig.json",
+    "build": "node build.js",
     "build:scripts": "tsc --build scripts/tsconfig.json",
     "build:docs": "node ./scripts/copy.js",
     "format": "prettier --write src/ scripts/",
@@ -38,6 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^8.20.0",
     "@typescript-eslint/parser": "^8.20.0",
     "@vitest/coverage-v8": "^2.1.8",
+    "esbuild": "^0.25.5",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "3.4.2",
